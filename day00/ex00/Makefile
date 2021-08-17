@@ -1,0 +1,25 @@
+NAME		=	megaphone
+
+#INCLUDE		=	philo.h
+
+SRC			=	megaphone.cpp
+
+OBJ_NAME	= $(SRC:.cpp=.o)
+
+G++FLAGS	= clang++ -Wall -Wextra -Werror
+
+.c.o:
+			$(G++FLAGS) -c $< -o $(<:.cpp=.o)
+
+$(NAME):	$(OBJ_NAME)
+			$(G++FLAGS) -o $(NAME) $(OBJ_NAME)
+
+all:		$(NAME)
+
+clean:
+			rm -f $(OBJ_NAME)
+
+fclean:		clean
+			rm -f ${NAME}
+
+re:			fclean all
