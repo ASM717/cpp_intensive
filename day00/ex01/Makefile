@@ -2,7 +2,7 @@ NAME		=	phonebook
 
 INCLUDE		=	PhoneBook.hpp
 
-SRC			=	main.cpp PhoneBook.cpp
+SRC			=	main.cpp PhoneBook.cpp 
 
 OBJ_NAME	= $(SRC:.cpp=.o)
 
