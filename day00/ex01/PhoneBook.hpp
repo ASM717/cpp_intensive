@@ -16,6 +16,7 @@
 #define ARR 8
 #include <iostream>
 #include <iomanip>
+#include <string>
 
 # define RED		"\x1b[31m"
 # define GREEN		"\x1b[32m"
@@ -34,7 +35,6 @@ private:
 	std::string m_darkestSecret;
 	int m_index;
 public:
-//геттеры
 	PhoneBook(){}
 	int getIndex()
 	{
@@ -60,7 +60,6 @@ public:
 	{
 		return m_darkestSecret;
 	}
-//сеттеры
 	void setIndex(int index)
 	{
 		m_index = index;
@@ -85,7 +84,6 @@ public:
 	{
 		m_darkestSecret = secret;
 	}
-
 	void searchContact(void);
 	void addContact(int index);
 	void printPhoneBook(void);

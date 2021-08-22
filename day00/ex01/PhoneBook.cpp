@@ -12,9 +12,6 @@
 
 #include "PhoneBook.hpp"
 
-// PhoneBook::PhoneBook(std::string name, std::string surname,
-// std::string nick, std::string phone, std::string secret);
-
 void PhoneBook::addContact(int index)
 {
 	std::string input_str;
@@ -39,7 +36,22 @@ void PhoneBook::addContact(int index)
 
 void PhoneBook::searchContact(void)
 {
-	std::cout << "|" << std::setw(10) << getIndex() << "|" << std::setw(10)
-	<< getFirstName() << "|" << std::setw(10) << getLastName() << "|" <<
+	if(m_firstName.size() > 10)
+	{
+		m_firstName = m_firstName.substr(0, 9);
+		m_firstName.insert(9, ".");
+	}
+	if(m_lastName.size() > 10)
+	{
+		m_lastName = m_lastName.substr(0, 9);
+		m_lastName.insert(9, ".");
+	}
+	if(m_nickName.size() > 10)
+	{
+		m_nickName = m_nickName.substr(0, 9);
+		m_nickName.insert(9, ".");
+	}
+	std::cout << GREEN "|" << std::setw(10) << getIndex() << "|" << std::setw
+	(10) << getFirstName() << "|" << std::setw(10) << getLastName() << "|" <<
 	std::setw(10) << getNickName() << "|" << std::endl;
 }

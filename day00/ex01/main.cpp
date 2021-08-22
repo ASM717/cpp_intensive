@@ -12,6 +12,13 @@
 
 #include "PhoneBook.hpp"
 
+static void printSearch()
+{
+	std::cout << BLUE"|" << std::setw(10) << "index" << "|" << std::setw(10)
+	<< "first name" << "|" << std::setw(10) << "last name" << "|" <<
+	std::setw(10) << "nickname" << "|" << std::endl;
+}
+
 int main(void)
 {
 	std::string input_str;
@@ -30,8 +37,8 @@ int main(void)
 			if(count < 8)
 			{
 				phoneBook[count].addContact(count + 1);
-				if (check_num != 8) check_num = count;
 				count++;
+				if (check_num != 8) check_num = count;
 			}
 			else if (count == 8)
 			{
@@ -43,15 +50,11 @@ int main(void)
 		}
 		else if (input_str == "SEARCH")
 		{
-			std::cout << "|" << std::setw(10) << "index" << "|" << std::setw(10)
-			<< "first name" << "|" << std::setw(10) << "last name" << "|" <<
-			std::setw(10) << "nickname" << "|" << std::endl;
+			printSearch();
 			if(count <= 8)
 			{
 				for(int i = 0; i < check_num; i++)
-				{
 					phoneBook[i].searchContact();
-				}
 			}
 		}
 		else if (input_str == "EXIT")
