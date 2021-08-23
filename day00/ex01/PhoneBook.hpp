@@ -17,6 +17,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <cstdlib>
 
 #define RED		"\x1b[31m"
 #define GREEN	"\x1b[32m"
@@ -86,6 +87,7 @@ public:
 	}
 	void searchContact(void);
 	void addContact(int index);
+	void checkIndexContact(int index);
 };
 
 #endif

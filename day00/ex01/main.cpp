@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 16:48:46 by amuriel           #+#    #+#             */
-/*   Updated: 2021/08/20 09:56:29 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/08/23 12:31:32 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,14 @@ int main(void)
 				for(int i = 0; i < check_num; i++)
 					phoneBook[i].searchContact();
 			}
+			std::string index_input;
+			std::cout << GREEN"Enter the index: ";
+			std::getline(std::cin, index_input);
+			int idx_input = atoi(index_input.c_str());
+			if(idx_input && idx_input < count + 1)
+			{
+				phoneBook[idx_input - 1].checkIndexContact(idx_input);
+			} else std::cout << RED"Error index!" << std::endl;
 		}
 		else if (input_str == "EXIT")
 			exit(1);
