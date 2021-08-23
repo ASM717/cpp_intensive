@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 16:35:52 by amuriel           #+#    #+#             */
-/*   Updated: 2021/08/15 17:31:22 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/08/23 10:41:36 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int main(int argc, char **argv)
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 		return (0);
 	}
-	for (int i = 0; i < argc; i++)
+	for (int i = 1; i < argc; i++)
 	{
-		for (int j = 0; j < (int)strlen(argv[i]); ++j)
+		for (int j = 0; j < (int)strlen(argv[i]); j++)
 			argv[i][j] = std::toupper((argv[i][j]));
 		std::cout << argv[i];
 	}

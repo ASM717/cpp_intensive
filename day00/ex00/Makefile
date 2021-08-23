@@ -1,7 +1,5 @@
 NAME		=	megaphone
 
-#INCLUDE		=	philo.h
-
 SRC			=	megaphone.cpp
 
 OBJ_NAME	= $(SRC:.cpp=.o)
@@ -21,5 +19,10 @@ clean:
 
 fclean:		clean
 			rm -f ${NAME}
+
+test:		$(NAME)
+			./$(NAME) "shhhhh... I think the students are asleep..."
+			./$(NAME) Damnit " ! " "Sorry students, I thought this thing was off."
+			./$(NAME)
 
 re:			fclean all

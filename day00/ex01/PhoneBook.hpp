@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 10:48:11 by amuriel           #+#    #+#             */
-/*   Updated: 2021/08/20 10:53:10 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/08/23 11:08:42 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@
 #include <iomanip>
 #include <string>
 
-# define RED		"\x1b[31m"
-# define GREEN		"\x1b[32m"
-# define BLUE		"\x1b[34m"
-# define PURPLE		"\x1b[35m"
-# define SKY		"\x1b[36m"
-# define YEL		"\x1B[33m"
+#define RED		"\x1b[31m"
+#define GREEN	"\x1b[32m"
+#define BLUE	"\x1b[34m"
+#define PURPLE	"\x1b[35m"
+#define SKY		"\x1b[36m"
+#define YEL		"\x1B[33m"
 
 class PhoneBook
 {
@@ -86,7 +86,6 @@ public:
 	}
 	void searchContact(void);
 	void addContact(int index);
-	void printPhoneBook(void);
 };
 
 #endif
