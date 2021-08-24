@@ -1,18 +1,6 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/22 10:58:31 by amuriel           #+#    #+#             */
-/*   Updated: 2021/08/22 10:58:32 by amuriel          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include "Contact.hpp"
 
-#include "PhoneBook.hpp"
-
-void PhoneBook::addContact(int index)
+void Contact::addContact(int index)
 {
 	std::string input_str;
 
@@ -34,7 +22,7 @@ void PhoneBook::addContact(int index)
 	setDarkestSecret(input_str);
 }
 
-void PhoneBook::checkIndexContact(int index)
+void Contact::checkIndexContact(int index)
 {
 	std::cout << YEL"First Name: " + m_firstName << std::endl;
 	std::cout << YEL"Last Name: " + m_lastName << std::endl;
@@ -43,7 +31,7 @@ void PhoneBook::checkIndexContact(int index)
 	std::cout << YEL"Darkest Secret: " + m_darkestSecret << std::endl;
 }
 
-void PhoneBook::searchContact(void)
+void Contact::searchContact(void)
 {
 	std::string firstName;
 	std::string lastName;
@@ -66,4 +54,53 @@ void PhoneBook::searchContact(void)
 	std::cout << GREEN "|" << std::setw(10) << getIndex() << "|" << std::setw
 	(10) << firstName << "|" << std::setw(10) << lastName << "|" <<
 	std::setw(10) << nickName << "|" << std::endl;
+}
+
+int Contact::getIndex()
+{
+	return m_index;
+}
+std::string Contact::getFirstName()
+{
+	return m_firstName;
+}
+std::string Contact::getLastName()
+{
+	return m_lastName;
+}
+std::string Contact::getNickName()
+{
+	return m_nickName;
+}
+std::string Contact::getPhoneNumber()
+{
+	return m_phoneNumber;
+}
+std::string Contact::getDarkestSecret()
+{
+	return m_darkestSecret;
+}
+void Contact::setIndex(int index)
+{
+	m_index = index;
+}
+void Contact::setFirstName(std::string firstName)
+{
+	m_firstName = firstName;
+}
+void Contact::setLastName(std::string lastName)
+{
+	m_lastName = lastName;
+}
+void Contact::setNickName(std::string nick)
+{
+	m_nickName = nick;
+}
+void Contact::setPhoneNumber(std::string number)
+{
+	m_phoneNumber = number;
+}
+void Contact::setDarkestSecret(std::string secret)
+{
+	m_darkestSecret = secret;
 }

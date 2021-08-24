@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.hpp"
+#include "Phonebook.hpp"
 
 static void printSearch()
 {
@@ -22,51 +22,26 @@ static void printSearch()
 int main(void)
 {
 	std::string input_str;
-	PhoneBook phoneBook[ARR];
-	int count = 0;
-	int check_num = 0;
+	Phonebook phonebook;
 	std::cout << YEL"::::::::::::::>>>PHONE BOOK<<<::::::::::::::" << std::endl;
 	while (1)
 	{
+		std::cout << std::endl;
 		std::cout << BLUE"::::::::::::::: PROGRAM MENU :::::::::::::::" << std::endl;
 		std::cout << PURPLE":::::::::::: ADD | SEARCH | EXIT :::::::::::" << std::endl;
 		std::cout << GREEN"Enter command: ";
 		std::getline(std::cin, input_str);
+		if (std::cin.eof())
+			break;
 		if (input_str == "ADD")
 		{
-			if(count < 8)
-			{
-				phoneBook[count].addContact(count + 1);
-				count++;
-				if (check_num != 8) check_num = count;
-			}
-			else if (count == 8)
-			{
-				check_num = 8;
-				count = 0;
-				phoneBook[count].addContact(count + 1);
-				count++;
-			}
+			phonebook.add();
 		}
 		else if (input_str == "SEARCH")
 		{
 			printSearch();
-			if(count <= 8)
-			{
-				for(int i = 0; i < check_num; i++)
-					phoneBook[i].searchContact();
-			}
-			std::string index_input;
-			std::cout << GREEN"Enter the index: ";
-			std::getline(std::cin, index_input);
-			int idx_input = atoi(index_input.c_str());
-			if(idx_input && idx_input < count + 1)
-			{
-				phoneBook[idx_input - 1].checkIndexContact(idx_input);
-			} else std::cout << RED"Error index!" << std::endl;
+			phonebook.search();
 		}
-		else if (input_str == "EXIT")
-			exit(1);
 		else
 			std::cout << RED"Enter the correct command, please!" << std::endl;
 	}

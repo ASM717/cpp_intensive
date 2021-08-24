@@ -1,8 +1,7 @@
-NAME		= phonebook
+NAME		=	replace
+INCLUDE		=
 
-INCLUDE		= Phonebook.hpp Contact.hpp
-
-SRC			= main.cpp Phonebook.cpp Contact.cpp
+SRC			=	main.cpp
 
 OBJ_NAME	= $(SRC:.cpp=.o)
 
