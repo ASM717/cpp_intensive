@@ -5,6 +5,17 @@
 //	std::cout << m_filename <<
 //}
 
+static std::string ft_toupper_case(std::string str)
+{
+	std::string string;
+	int i;
+	for (i = 0; i < str.length(); i++)
+	{
+		string += std::toupper(str[i]);
+	}
+	return(string);
+}
+
 void Replace::replace()
 {
 	std::ifstream in(m_filename); //open
@@ -13,6 +24,12 @@ void Replace::replace()
 		throw(RED"Error: string is empty!");
 	if(!in.is_open())
 		throw(RED"Error: open file is failed!");
+	// if(in.peek() == EOF)
+	// 	throw(RED"Error: file is empty!");
+	std::string format = ".replace";
+	m_filename = ft_toupper_case(m_filename);
+	m_filename = m_filename + format;
+
 
 	std::cout << m_filename << std::endl;
 	std::cout << m_s1 << std::endl;
