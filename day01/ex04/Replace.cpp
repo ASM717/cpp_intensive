@@ -1,9 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Replace.cpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/08/25 16:22:06 by amuriel           #+#    #+#             */
+/*   Updated: 2021/08/25 19:22:47 by amuriel          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Replace.hpp"
 
-//int Replace::replace(std::string filename, std::string s1, std::string s2)
-//{
-//	std::cout << m_filename <<
-//}
+static std::string ft_sed(const std::string s1, const std::string s2, std::string buf)
+{
+	//npos - несуществующая позиция return (size_t)
+	for(size_t pos = 0; pos != std::string::npos;)
+	{
+		pos = buf.find(s1, pos);
+		if(pos != std::string::npos)
+		{
+			buf.erase(pos, s1.length());
+			buf.insert(pos, s2);
+			pos++;
+		}
+	}
+	return (buf);
+}
 
 static std::string ft_toupper_case(std::string str)
 {
@@ -19,25 +42,26 @@ static std::string ft_toupper_case(std::string str)
 void Replace::replace()
 {
 	std::ifstream in(m_filename); //open
-	std::ofstream of;//отправить вниз
-	if(!m_s1.length() || !m_s2.length())
+	if(!m_s1.length() || !m_s2.length() || !m_filename.length())
 		throw(RED"Error: string is empty!");
 	if(!in.is_open())
 		throw(RED"Error: open file is failed!");
-	// if(in.peek() == EOF)
-	// 	throw(RED"Error: file is empty!");
 	std::string format = ".replace";
 	m_filename = ft_toupper_case(m_filename);
 	m_filename = m_filename + format;
-
-
-	std::cout << m_filename << std::endl;
-	std::cout << m_s1 << std::endl;
-	std::cout << m_s2 << std::endl;
+	std::ofstream of(m_filename); //new open
+	std::string buf;
+	while (getline(in, buf))
+	{
+		of << ft_sed(m_s1, m_s2, buf);
+		if (of.eof())
+			of << std::endl;
+	}
+	in.close();
+	of.close();
 }
 
-Replace::Replace()
-{}
+Replace::Replace(){}
 
 Replace::Replace(std::string filename, std::string s1, std::string s2)
 {
@@ -46,5 +70,4 @@ Replace::Replace(std::string filename, std::string s1, std::string s2)
 	m_s2 = s2;
 }
 
-Replace::~Replace()
-{}
+Replace::~Replace(){}
