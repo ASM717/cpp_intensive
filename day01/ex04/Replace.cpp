@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Replace.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 16:22:06 by amuriel           #+#    #+#             */
-/*   Updated: 2021/08/25 19:22:47 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/08/25 21:19:09 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ static std::string ft_sed(const std::string s1, const std::string s2, std::strin
 		}
 	}
 	return (buf);
+	// надо доразобраться с выводом, не разделяются строки
 }
 
 static std::string ft_toupper_case(std::string str)

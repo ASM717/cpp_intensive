@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Replace.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 16:22:19 by amuriel           #+#    #+#             */
-/*   Updated: 2021/08/25 16:22:22 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/08/25 21:19:14 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ private:
 	std::string m_s1;
 	std::string m_s2;
 public:
-	//int replace(std::string filename, std::string s1, std::string s2);
 	void replace();
 
 	Replace();
