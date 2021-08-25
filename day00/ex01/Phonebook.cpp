@@ -51,5 +51,5 @@ void Phonebook::search()
 	if(idx_input && idx_input < count + 1)
 	{
 		contact[idx_input - 1].checkIndexContact(idx_input);
-	} else std::cout << RED"Error index!" << std::endl;
+	} else std::cerr << RED"Error index!" << std::endl;
 }

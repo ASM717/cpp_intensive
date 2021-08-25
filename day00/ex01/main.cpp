@@ -43,7 +43,7 @@ int main(void)
 			phonebook.search();
 		}
 		else
-			std::cout << RED"Enter the correct command, please!" << std::endl;
+			std::cerr << RED"Enter the correct command, please!" << std::endl;
 	}
 	return (0);
 }

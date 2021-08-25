@@ -1,7 +1,7 @@
-NAME		=	replace
-INCLUDE		=
+NAME		= replace
+INCLUDE		= Replace.hpp
 
-SRC			=	main.cpp
+SRC			= main.cpp Replace.cpp
 
 OBJ_NAME	= $(SRC:.cpp=.o)
 

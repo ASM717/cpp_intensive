@@ -1,24 +1,22 @@
 #include "Replace.hpp"
 
-void ft_bublik()
-{
-	//throw ("Mishanya");
-	std::cout << "Mishanya" << "\n";
-}
-
 int main(int argc, char **argv)
 {
 	if(argc == 4)
 	{
+		Replace replace(argv[1], argv[2], argv[3]);
 		try
 		{
-			ft_bublik();
+			replace.replace();
 		}catch(const char *exception)
 		{
-			std::cerr << exception;
-			throw ("Mishany");
+			std::cerr << exception << std::endl;
 		}
 	}
 	else
-		std::cout << "Error: arguments!" << std::endl;
+	{
+		std::cerr << RED"Error: arguments!" << std::endl;
+		return (1);
+	}
+	return (0);
 }
