@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 16:48:46 by amuriel           #+#    #+#             */
-/*   Updated: 2021/08/23 12:31:32 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/08/25 15:27:41 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ int main(void)
 			printSearch();
 			phonebook.search();
 		}
+		else if (input_str == "EXIT")
+			exit(1);
 		else
 			std::cerr << RED"Enter the correct command, please!" << std::endl;
 	}

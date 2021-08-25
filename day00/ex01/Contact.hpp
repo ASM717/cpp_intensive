@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 17:04:03 by amuriel           #+#    #+#             */
-/*   Updated: 2021/08/24 17:04:04 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/08/25 16:11:31 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ private:
 	std::string m_darkestSecret;
 	int m_index;
 public:
-	Contact(){}
+	Contact();
 	int getIndex();
 	std::string getFirstName();
 	std::string getLastName();
