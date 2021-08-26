@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/26 17:04:52 by amuriel           #+#    #+#             */
-/*   Updated: 2021/08/26 18:38:40 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/08/26 18:44:32 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int main(int argc, char **argv)
 	Levels levels;
 	if (argc != 2)
 	{
-		std::cerr << "Error: argument!" << std::endl;
+		std::cerr << RED"Error: argument!" << std::endl;
 		return (1);
 	}
 	std::string lvl_word = argv[1];
@@ -65,7 +65,7 @@ int main(int argc, char **argv)
 		karen.complain("ERROR");
 		break;
 	default:
-		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+		std::cout << RED"[ Probably complaining about insignificant problems ]" << std::endl;
 		break;
 	}
 }

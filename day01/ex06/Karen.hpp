@@ -6,12 +6,16 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/26 17:04:47 by amuriel           #+#    #+#             */
-/*   Updated: 2021/08/26 17:04:48 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/08/26 18:48:42 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef KAREN_HPP
 #define KAREN_HPP
+
+#define RED		"\x1b[31m"
+#define GREEN	"\x1b[32m"
+#define YEL		"\x1B[33m"
 
 #include <iostream>
 
