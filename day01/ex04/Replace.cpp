@@ -6,13 +6,13 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 16:22:06 by amuriel           #+#    #+#             */
-/*   Updated: 2021/08/26 11:05:28 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/08/26 14:41:38 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Replace.hpp"
 
-static std::string ft_sed(const std::string s1, const std::string s2, std::string buf)
+static std::string ft_sed(std::string s1, std::string s2, std::string buf)
 {
 	//npos - несуществующая позиция return (size_t)
 	for(size_t pos = 0; pos != std::string::npos;)
