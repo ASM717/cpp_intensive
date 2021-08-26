@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Replace.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 16:22:06 by amuriel           #+#    #+#             */
-/*   Updated: 2021/08/25 21:19:09 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/08/26 11:05:28 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ static std::string ft_sed(const std::string s1, const std::string s2, std::strin
 		}
 	}
 	return (buf);
-	// надо доразобраться с выводом, не разделяются строки
 }
 
 static std::string ft_toupper_case(std::string str)
@@ -44,7 +43,7 @@ void Replace::replace()
 {
 	std::ifstream in(m_filename); //open
 	if(!m_s1.length() || !m_s2.length() || !m_filename.length())
-		throw(RED"Error: string is empty!");
+		throw(RED"Error: string or filename is empty!");
 	if(!in.is_open())
 		throw(RED"Error: open file is failed!");
 	std::string format = ".replace";
@@ -55,7 +54,7 @@ void Replace::replace()
 	while (getline(in, buf))
 	{
 		of << ft_sed(m_s1, m_s2, buf);
-		if (of.eof())
+		if (!of.eof())
 			of << std::endl;
 	}
 	in.close();
