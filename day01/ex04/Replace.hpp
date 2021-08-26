@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Replace.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 16:22:19 by amuriel           #+#    #+#             */
-/*   Updated: 2021/08/26 11:05:05 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/08/26 20:58:05 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <string>
 #include <fstream>
 
-#define RED	"\x1b[31m"
+#define RED "\x1b[31m"
 
 class Replace
 {
