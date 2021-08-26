@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/26 17:04:52 by amuriel           #+#    #+#             */
-/*   Updated: 2021/08/26 17:51:15 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/08/26 18:38:40 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,33 @@
 
 enum Levels
 {
-	DEBUG,
-	INFO,
-	WARNING,
-	ERROR
+	DEBUG = 0,
+	INFO = 1,
+	WARNING = 2,
+	ERROR = 3
 };
+
+static int choose_msg(std::string message)
+{
+	std::string lvl[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	for(int i = 0; i < 4; i++)
+	{
+		if(lvl[i] == message)
+			return(i);
+	}
+	return(4);
+}
+
+static std::string ft_toupper_case(std::string str)
+{
+	std::string string;
+	int i;
+	for (i = 0; i < str.length(); i++)
+	{
+		string += std::toupper(str[i]);
+	}
+	return(string);
+}
 
 int main(int argc, char **argv)
 {
@@ -30,22 +52,16 @@ int main(int argc, char **argv)
 		return (1);
 	}
 	std::string lvl_word = argv[1];
-
-	
-	//std::cout << lvl_word << std::endl;
-
-	switch (levels)
+	lvl_word = ft_toupper_case(lvl_word);
+	switch (choose_msg(lvl_word))
 	{
-	case DEBUG:
+	case (0):
 		karen.complain("DEBUG");
-		break;
-	case INFO:
+	case (1):
 		karen.complain("INFO");
-		break;
-	case WARNING:
+	case (2):
 		karen.complain("WARNING");
-		break;
-	case ERROR:
+	case (3):
 		karen.complain("ERROR");
 		break;
 	default:
