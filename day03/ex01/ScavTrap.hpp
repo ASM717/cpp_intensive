@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/31 17:29:10 by amuriel           #+#    #+#             */
-/*   Updated: 2021/08/31 17:29:11 by amuriel          ###   ########.fr       */
+/*   Created: 2021/08/31 17:29:16 by amuriel           #+#    #+#             */
+/*   Updated: 2021/08/31 17:41:33 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef SCAVTRAP_HPP
+#define SCAVTRAP_HPP
+
 #include "ClapTrap.hpp"
 
-int main(void)
+class Scavtrap : public ClapTrap
 {
-	ClapTrap clapTrap("Thomas Shelby");
+private:
 
-	clapTrap.attack("Chester Campbell");
-	clapTrap.takeDamage(100);
-	clapTrap.beRepaired(3);
-}
+public:
+
+};
+
+#endif
