@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/31 17:29:10 by amuriel           #+#    #+#             */
-/*   Updated: 2021/08/31 17:29:11 by amuriel          ###   ########.fr       */
+/*   Created: 2021/09/01 17:35:08 by amuriel           #+#    #+#             */
+/*   Updated: 2021/09/01 17:35:09 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
 
-int main(void)
+#include "ClapTrap.hpp"
+
+class FragTrap : public ClapTrap
 {
-	ClapTrap	clapTrap("Biba");
-	ScavTrap	scavTrap("Boba");
-	ScavTrap	copy(scavTrap);
-	std::cout << "------------------" << std::endl;
-	scavTrap.attack(clapTrap.getName());
-	clapTrap.takeDamage(scavTrap.getAttackDamage());
-	clapTrap.attack("Boba");
-	clapTrap.beRepaired(5);
-	scavTrap.guardGate();
-	std::cout << "------------------" << std::endl;
-	return (0);
-}
+private:
+
+public:
+	FragTrap();
+	FragTrap(std::string name);
+	FragTrap(const FragTrap &ref);
+	FragTrap& operator=(const FragTrap &ref);
+	~FragTrap();
+	void highFivesGuys(void);
+};
+
+#endif
