@@ -5,24 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/31 17:29:10 by amuriel           #+#    #+#             */
-/*   Updated: 2021/08/31 17:29:11 by amuriel          ###   ########.fr       */
+/*   Created: 2021/09/01 17:35:13 by amuriel           #+#    #+#             */
+/*   Updated: 2021/09/01 17:35:14 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main(void)
 {
 	ClapTrap	clapTrap("Biba");
-	ScavTrap	scavTrap("Boba");
-	ScavTrap	copy(scavTrap);
+	FragTrap	clapTrap2("Boba");
+	FragTrap	copyTrap(clapTrap2);
 	std::cout << "------------------" << std::endl;
-	scavTrap.attack(clapTrap.getName());
-	clapTrap.takeDamage(scavTrap.getAttackDamage());
+	clapTrap2.attack(clapTrap.getName());
+	clapTrap.takeDamage(clapTrap2.getAttackDamage());
 	clapTrap.attack("Boba");
 	clapTrap.beRepaired(5);
-	scavTrap.guardGate();
+	clapTrap2.highFivesGuys();
 	std::cout << "------------------" << std::endl;
 	return (0);
 }
