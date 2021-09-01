@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 10:48:01 by amuriel           #+#    #+#             */
-/*   Updated: 2021/08/31 16:25:58 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/01 10:30:05 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 ClapTrap::ClapTrap()
 {
-	//std::cout << "Default constructor called" << std::endl;
+	std::cout << "Default constructor called" << std::endl;
 	// m_name = nullptr;
 	// m_hitpoints = 10;
 	// m_energy_points = 10;
@@ -23,7 +23,7 @@ ClapTrap::ClapTrap()
 
 ClapTrap::ClapTrap(std::string const &name)
 {
-	//std::cout << "Reload constructor called" << std::endl;
+	std::cout << "Constructor  >name< called" << std::endl;
 	m_name = name;
 	m_hitpoints = 10;
 	m_energy_points = 10;
@@ -32,11 +32,13 @@ ClapTrap::ClapTrap(std::string const &name)
 
 ClapTrap::ClapTrap(const ClapTrap &ref)
 {
+	std::cout << "Copy constructor called" << std::endl;
 	*this = ref;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &ref)
 {
+	std::cout << "Assignation operator called" << std::endl;
 	m_name = ref.m_name;
 	m_hitpoints = ref.m_hitpoints;
 	m_energy_points = ref.m_energy_points;
@@ -46,7 +48,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &ref)
 
 ClapTrap::~ClapTrap()
 {
-	// std::cout << "Destructor Called" << std::endl;
+	std::cout << "Destructor Called" << std::endl;
 }
 
 void ClapTrap::attack(std::string const & target)
@@ -56,15 +58,12 @@ void ClapTrap::attack(std::string const & target)
 }
 void ClapTrap::takeDamage(unsigned int amount)
 {
-	m_hitpoints -= amount;
 	std::cout << "ClapTrap " + m_name + " take " << amount << " damage "
 	<< m_hitpoints << " hitpoints!" << std::endl;
+	m_hitpoints -= amount;
 }
 void ClapTrap::beRepaired(unsigned int amount)
 {
+	std::cout << "ClapTrap " + m_name + " has been " << amount << " repaired " << std::endl;
 	m_hitpoints += amount;
-	if (m_hitpoints <= 0)
-		m_hitpoints = 0;
-	std::cout << "ClapTrap " + m_name + " be " << amount << " repaired "
-	<< m_hitpoints << " hitpoints!" << std::endl;
 }

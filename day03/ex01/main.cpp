@@ -10,13 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main(void)
 {
-	ClapTrap clapTrap("Thomas Shelby");
+	ScavTrap scavTrap("Biba");
+//	ScavTrap scavTrap2 = scavTrap;
+	scavTrap.attack("Boba");
+	scavTrap.takeDamage(100);
+	scavTrap.beRepaired(5);
+	scavTrap.guardGate();
+//	scavTrap2.attack("Koba");
+//	scavTrap2.takeDamage(50);
+//	scavTrap2.takeDamage(6);
 
-	clapTrap.attack("Chester Campbell");
-	clapTrap.takeDamage(100);
-	clapTrap.beRepaired(3);
+	return (0);
 }
