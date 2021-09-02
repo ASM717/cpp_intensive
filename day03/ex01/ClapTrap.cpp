@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 17:28:59 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/01 12:38:53 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/02 21:04:52 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ ClapTrap::ClapTrap(const ClapTrap &ref)
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &ref)
 {
+	//дописать во всех заданиях this !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	std::cout << "Assignation operator called" << std::endl;
 	m_name = ref.m_name;
 	m_hitpoints = ref.m_hitpoints;

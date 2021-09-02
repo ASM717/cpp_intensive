@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 17:29:06 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/01 12:39:18 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/02 20:43:19 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ public:
 	void setEnergyPoints(unsigned int energy_points);
 	void setAttackDamage(unsigned int attack_damage);
 
-	void attack(std::string const & target);
+	virtual void attack(std::string const & target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 };
