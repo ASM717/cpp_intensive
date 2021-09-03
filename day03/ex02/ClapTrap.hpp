@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 17:35:00 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/01 17:35:02 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/03 11:07:48 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class ClapTrap
 {
-private:
+protected:
 	std::string m_name;
 	unsigned int m_hitpoints;
 	unsigned int m_energy_points;

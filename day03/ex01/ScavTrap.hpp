@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 17:29:16 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/02 20:40:25 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/03 09:48:35 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
 	ScavTrap& operator=(const ScavTrap &ref);
 	~ScavTrap();
 	void guardGate();
-	virtual void attack(std::string const & target);
+	void attack(std::string const & target);
 };
 
 #endif

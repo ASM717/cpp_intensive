@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/03 12:54:49 by amuriel           #+#    #+#             */
+/*   Updated: 2021/09/03 12:54:50 by amuriel          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef CLAPTRAP_HPP
 #define CLAPTRAP_HPP
 
@@ -5,7 +17,7 @@
 
 class ClapTrap
 {
-private:
+protected:
 	std::string m_name;
 	unsigned int m_hitpoints;
 	unsigned int m_energy_points;

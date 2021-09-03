@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/03 12:55:22 by amuriel           #+#    #+#             */
+/*   Updated: 2021/09/03 12:55:23 by amuriel          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SCAVTRAP_HPP
 #define SCAVTRAP_HPP
 
@@ -13,6 +25,7 @@ public:
 	ScavTrap(const ScavTrap &ref);
 	ScavTrap& operator=(const ScavTrap &ref);
 	~ScavTrap();
+	void attack(std::string const &target);
 	void guardGate();
 };
 

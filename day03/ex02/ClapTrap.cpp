@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 17:34:57 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/01 17:35:03 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/03 10:55:24 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,15 @@
 
 ClapTrap::ClapTrap()
 {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "Clap Trap default constructor called" << std::endl;
+	m_hitpoints = 10;
+	m_energy_points = 10;
+	m_attack_damage = 0;
 }
 
 ClapTrap::ClapTrap(std::string const &name)
 {
-	std::cout << "Constructor called" << std::endl;
+	std::cout << "Clap Trap constructor called" << std::endl;
 	m_name = name;
 	m_hitpoints = 10;
 	m_energy_points = 10;
@@ -28,13 +31,13 @@ ClapTrap::ClapTrap(std::string const &name)
 
 ClapTrap::ClapTrap(const ClapTrap &ref)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "Clap Trap copy constructor called" << std::endl;
 	*this = ref;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &ref)
 {
-	std::cout << "Assignation operator called" << std::endl;
+	std::cout << "Clap Trap assignation operator called" << std::endl;
 	m_name = ref.m_name;
 	m_hitpoints = ref.m_hitpoints;
 	m_energy_points = ref.m_energy_points;
@@ -44,7 +47,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &ref)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "Destructor Called" << std::endl;
+	std::cout << "Clap Trap destructor called" << std::endl;
 }
 
 void ClapTrap::attack(std::string const & target)

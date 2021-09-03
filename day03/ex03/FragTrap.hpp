@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/03 12:55:06 by amuriel           #+#    #+#             */
+/*   Updated: 2021/09/03 12:55:07 by amuriel          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FRAGTRAP_HPP
 #define FRAGTRAP_HPP
 
@@ -14,6 +26,7 @@ public:
 	FragTrap& operator=(const FragTrap &ref);
 	~FragTrap();
 	void highFivesGuys(void);
+	void attack(std::string const & target);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 17:35:05 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/01 17:35:06 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/03 11:22:59 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,37 +14,43 @@
 
 FragTrap::FragTrap()
 {
-	std::cout << "Third default constructor called" << std::endl;
+	std::cout << "FragTrap default constructor called" << std::endl;
 }
 
 FragTrap::FragTrap(std::string name)
 {
-	std::cout << "Third constructor called" << std::endl;
-	this->setName(name);
-	this->setHitpoints(100);
-	this->setEnergyPoints(100);
-	this->setAttackDamage(30);
+	std::cout << "FragTrap constructor called" << std::endl;
+	this->m_name = name;
+	this->m_hitpoints = 100;
+	this->m_energy_points = 100;
+	this->m_attack_damage = 30;
 }
 
 FragTrap::FragTrap(const FragTrap &ref)
 {
-	std::cout << "Third copy constructor called" << std::endl;
+	std::cout << "FragTrap copy constructor called" << std::endl;
 	*this = ref;
 }
 
 FragTrap &FragTrap::operator=(const FragTrap &ref)
 {
-	std::cout << "Third assignation operator called" << std::endl;
+	std::cout << "FragTrap assignation operator called" << std::endl;
 	this->ClapTrap::operator=(ref);
 	return (*this);
 }
 
 FragTrap::~FragTrap()
 {
-	std::cout << "Third destructor called" << std::endl;
+	std::cout << "FragTrap destructor called" << std::endl;
 }
 
 void FragTrap::highFivesGuys(void)
 {
-	std::cout << "FragTrap " << getName() << " wants to high five!" << std::endl;
+	std::cout << "FragTrap " << this->m_name << " wants to high five!" << std::endl;
+}
+
+void FragTrap::attack(std::string const & target)
+{
+	std::cout << "FragTrap " + this->m_name + " attack " + target + ", causing "
+	<< this->m_attack_damage << " points of damage!" << std::endl;
 }

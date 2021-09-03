@@ -1,8 +1,8 @@
 NAME		= RepetitiveWork
 
-INCLUDE		= ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
+INCLUDE		= ClapTrap.hpp FragTrap.hpp
 
-SRC			= main.cpp ClapTrap.cpp  ScavTrap.cpp FragTrap.cpp
+SRC			= main.cpp ClapTrap.cpp FragTrap.cpp
 
 OBJ_NAME	= $(SRC:.cpp=.o)
 
