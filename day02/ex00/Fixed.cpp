@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 16:25:39 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/03 13:09:16 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/03 15:57:46 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Fixed::Fixed(const Fixed & ref)
 {
 	std::cout << "Copy constructor called" << std::endl;
 	m_point_value = ref.m_point_value;
-	//*this = ref;
+	*this = ref;
 	return ;
 }
 
