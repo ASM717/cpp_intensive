@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 13:59:05 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/03 14:07:13 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/03 19:41:52 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ public:
 	Cat(const Cat &ref);
 	Cat& operator=(const Cat &ref);
 	~Cat();
+
+	void makeSound() const override;
 };
 
 #endif

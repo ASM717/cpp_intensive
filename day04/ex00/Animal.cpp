@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 13:24:54 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/03 14:22:58 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/03 19:27:18 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ Animal &Animal::operator=(const Animal &ref)
 
 std::string Animal::getType()
 {
-	return type;
+	return this->type;
 }
 
 void Animal::makeSound()

@@ -6,7 +6,7 @@
 /*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 13:59:02 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/03 18:51:13 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/03 19:42:07 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,12 @@ Cat &Cat::operator=(const Cat &ref)
 	std::cout << "Cat assignation operator called" << std::endl;
 	return (*this);
 }
+
+void Cat::makeSound() const
+{
+	std::cout << "Myaaaauuuu" << std::endl;
+}
+
 
 Cat::~Cat()
 {
