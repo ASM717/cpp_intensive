@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 14:07:28 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/03 14:10:18 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/03 18:51:28 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ Dog::Dog()
 Dog::Dog(const Dog &ref)
 {
 	std::cout << "Dog copy constructor called" << std::endl;
+	this->Animal::operator=(ref);
 	*this = ref;
 }
 

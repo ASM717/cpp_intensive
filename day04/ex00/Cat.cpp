@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 13:59:02 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/03 14:04:04 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/03 18:51:13 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ Cat::Cat()
 Cat::Cat(const Cat &ref)
 {
 	std::cout << "Cat copy constructor called" << std::endl;
+	this->Animal::operator=(ref);
 	*this = ref;
 }
 
