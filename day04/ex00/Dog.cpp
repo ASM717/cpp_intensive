@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 14:07:28 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/04 11:59:09 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/04 19:10:05 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,19 @@
 Dog::Dog()
 {
 	type = "Dog";
-	std::cout << type + " default constructor called" << std::endl;
+	//std::cout << type + " default constructor called" << std::endl;
 }
 
 Dog::Dog(const Dog &ref)
 {
-	std::cout << "Dog copy constructor called" << std::endl;
+	//std::cout << "Dog copy constructor called" << std::endl;
 	this->Animal::operator=(ref);
 	*this = ref;
 }
 
 Dog &Dog::operator=(const Dog &ref)
 {
-	std::cout << "Dog assignation operator called" << std::endl;
+	//std::cout << "Dog assignation operator called" << std::endl;
 	return (*this);
 }
 
@@ -38,5 +38,5 @@ void Dog::makeSound() const
 
 Dog::~Dog()
 {
-	std::cout << type + " destructor called" << std::endl;
+	//std::cout << type + " destructor called" << std::endl;
 }
