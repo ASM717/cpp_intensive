@@ -1,53 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/03 13:24:54 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/04 12:12:39 by amuriel          ###   ########.fr       */
+/*   Created: 2021/09/04 12:26:38 by amuriel           #+#    #+#             */
+/*   Updated: 2021/09/04 12:32:06 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-Animal::Animal()
+WrongAnimal::WrongAnimal()
 {
-	type = "Animal";
+	type = "WrongAnimal";
 	std::cout << type + " default constructor called" << std::endl;
 }
 
-Animal::Animal(std::string m_type)
+WrongAnimal::WrongAnimal(std::string m_type)
 {
-	std::cout << "Animal constructor called" << std::endl;
+	std::cout << "WrongAnimal constructor called" << std::endl;
 	this->type = m_type;
 }
 
-Animal::Animal(const Animal &ref)
+WrongAnimal::WrongAnimal(const WrongAnimal &ref)
 {
 	std::cout << "Animal copy constructor called" << std::endl;
 	*this = ref;
 }
 
-Animal &Animal::operator=(const Animal &ref)
+WrongAnimal &WrongAnimal::operator=(const WrongAnimal &ref)
 {
-	std::cout << "Animal assignation operator called" << std::endl;
+	std::cout << "WrongAnimal assignation operator called" << std::endl;
 	this->type = ref.getType();
 	return (*this);
 }
 
-std::string Animal::getType() const
+std::string WrongAnimal::getType() const
 {
 	return this->type;
 }
 
-void Animal::makeSound() const
+void WrongAnimal::makeSound() const
 {
-	std::cout << "Animal say some voice" << std::endl;
+	std::cout << "WrongAnimal say some voice" << std::endl;
 }
 
-Animal::~Animal()
+WrongAnimal::~WrongAnimal()
 {
 	std::cout << type + " destructor called" << std::endl;
 }

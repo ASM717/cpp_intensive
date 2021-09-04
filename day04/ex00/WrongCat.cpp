@@ -1,43 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/03 13:59:02 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/04 11:59:38 by amuriel          ###   ########.fr       */
+/*   Created: 2021/09/04 12:21:28 by amuriel           #+#    #+#             */
+/*   Updated: 2021/09/04 12:40:11 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "WrongCat.hpp"
 
-Cat::Cat()
+WrongCat::WrongCat()
 {
-	type = "Cat";
+	type = "WrongCat";
 	std::cout << type + " default constructor called" << std::endl;
 }
 
-Cat::Cat(const Cat &ref)
+WrongCat::WrongCat(const WrongCat &ref)
 {
-	std::cout << "Cat copy constructor called" << std::endl;
-	this->Animal::operator=(ref);
+	std::cout << "WrongCat copy constructor called" << std::endl;
+	this->WrongAnimal::operator=(ref);
 	*this = ref;
 }
 
-Cat &Cat::operator=(const Cat &ref)
+WrongCat &WrongCat::operator=(const WrongCat &ref)
 {
-	std::cout << "Cat assignation operator called" << std::endl;
+	std::cout << "WrongCat assignation operator called" << std::endl;
 	return (*this);
 }
 
-void Cat::makeSound() const
+void WrongCat::makeSound() const
 {
-	std::cout << "Meowwww...Meowwwww!!!" << std::endl;
+	std::cout << "WrongCat...Meowwww...Meowwwww!!!" << std::endl;
 }
 
 
-Cat::~Cat()
+WrongCat::~WrongCat()
 {
 	std::cout << type + " destructor called" << std::endl;
 }

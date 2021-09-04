@@ -1,8 +1,8 @@
 NAME		= polymorphism
 
-INCLUDE		= Animal.hpp Cat.hpp Dog.hpp
+INCLUDE		= Animal.hpp Cat.hpp Dog.hpp WrongCat.hpp WrongAnimal.hpp
 
-SRC			= main.cpp Animal.cpp Cat.cpp Dog.cpp
+SRC			= main.cpp Animal.cpp Cat.cpp Dog.cpp WrongCat.cpp WrongAnimal.cpp
 
 OBJ_NAME	= $(SRC:.cpp=.o)
 

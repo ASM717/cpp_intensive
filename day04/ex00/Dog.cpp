@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 14:07:28 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/03 18:51:28 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/04 11:59:09 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 Dog::Dog()
 {
-	std::cout << "Dog default constructor called" << std::endl;
+	type = "Dog";
+	std::cout << type + " default constructor called" << std::endl;
 }
 
 Dog::Dog(const Dog &ref)
@@ -30,7 +31,12 @@ Dog &Dog::operator=(const Dog &ref)
 	return (*this);
 }
 
+void Dog::makeSound() const
+{
+	std::cout << "Gav....Gav!!!" << std::endl;
+}
+
 Dog::~Dog()
 {
-	std::cout << "Dog destructor called" << std::endl;
+	std::cout << type + " destructor called" << std::endl;
 }
