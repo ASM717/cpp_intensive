@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 14:49:35 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/04 14:49:36 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/05 10:49:28 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 #define CAT_HPP
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Cat : public Animal
 {
 private:
-
+	Brain* m_brain;
 public:
 	Cat();
 	Cat(const Cat &ref);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 14:49:40 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/04 14:49:41 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/05 11:08:02 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Dog::Dog()
 {
+	m_brain = new Brain();
 	type = "Dog";
 	std::cout << type + " default constructor called" << std::endl;
 }
@@ -39,4 +40,5 @@ void Dog::makeSound() const
 Dog::~Dog()
 {
 	std::cout << type + " destructor called" << std::endl;
+	delete m_brain;
 }

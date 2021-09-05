@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 14:49:29 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/04 14:49:30 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/05 11:07:21 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Cat::Cat()
 {
+	m_brain = new Brain();
 	type = "Cat";
 	std::cout << type + " default constructor called" << std::endl;
 }
@@ -40,4 +41,5 @@ void Cat::makeSound() const
 Cat::~Cat()
 {
 	std::cout << type + " destructor called" << std::endl;
+	delete m_brain;
 }
