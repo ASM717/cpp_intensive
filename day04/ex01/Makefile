@@ -1,4 +1,4 @@
-NAME		= polymorphism
+NAME		= deepCopy
 
 INCLUDE		= Animal.hpp Cat.hpp Dog.hpp WrongCat.hpp WrongAnimal.hpp
 

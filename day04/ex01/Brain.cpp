@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 14:51:55 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/04 15:13:33 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/07 13:20:49 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,25 @@
 
 Brain::Brain()
 {
-	
+	std::cout << "Brain default constructor called" << std::endl;
+}
+
+Brain::Brain(const Brain &ref) {
+	std::cout << "Brain copy constructor called"<<std::endl;
+	*this = ref;
 }
 
 Brain::~Brain()
 {
 	std::cout << "Brain destructor called" << std::endl;
+}
+
+std::string Brain::getIdeas()
+{
+
+}
+
+void Brain::setIdeas(std::string ideas)
+{
+
 }

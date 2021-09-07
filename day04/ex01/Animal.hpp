@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 14:49:20 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/04 14:49:23 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/07 13:15:32 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	Animal(std::string m_type);
 	Animal(const Animal &ref);
 	Animal& operator=(const Animal &ref);
-	~Animal();
+	virtual ~Animal();
 	std::string getType() const;
 	virtual void makeSound() const;
 };
