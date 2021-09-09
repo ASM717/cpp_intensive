@@ -6,7 +6,7 @@
 /*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 14:51:55 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/07 13:20:49 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/09 21:54:28 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Brain::Brain()
 {
 	std::cout << "Brain default constructor called" << std::endl;
 }
-
+//разобраться с deeep cpy
 Brain::Brain(const Brain &ref) {
 	std::cout << "Brain copy constructor called"<<std::endl;
 	*this = ref;
