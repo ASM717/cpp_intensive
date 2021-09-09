@@ -3,22 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/26 17:04:52 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/02 18:06:39 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/09 22:18:06 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Karen.hpp"
-
-enum Levels
-{
-	DEBUG = 0,
-	INFO = 1,
-	WARNING = 2,
-	ERROR = 3
-};
 
 static int choose_msg(std::string message)
 {
@@ -45,7 +37,7 @@ static std::string ft_toupper_case(std::string str)
 int main(int argc, char **argv)
 {
 	Karen karen;
-	Levels levels;
+
 	if (argc != 2)
 	{
 		std::cerr << RED"Error: argument!" << std::endl;
