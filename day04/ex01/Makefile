@@ -1,8 +1,8 @@
 NAME		= deepCopy
 
-INCLUDE		= Animal.hpp Cat.hpp Dog.hpp WrongCat.hpp WrongAnimal.hpp
+INCLUDE		= Animal.hpp Cat.hpp Dog.hpp WrongCat.hpp Brain.hpp
 
-SRC			= main.cpp Animal.cpp Cat.cpp Dog.cpp WrongCat.cpp WrongAnimal.cpp
+SRC			= main.cpp Animal.cpp Cat.cpp Dog.cpp WrongCat.cpp Brain.cpp
 
 OBJ_NAME	= $(SRC:.cpp=.o)
 

@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 13:24:56 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/04 12:12:06 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/11 10:48:59 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	Animal(std::string m_type);
 	Animal(const Animal &ref);
 	Animal& operator=(const Animal &ref);
-	~Animal();
+	virtual ~Animal();
 	std::string getType() const;
 	virtual void makeSound() const;
 };

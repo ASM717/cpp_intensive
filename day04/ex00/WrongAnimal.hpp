@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 12:26:41 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/04 12:36:21 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/11 10:49:47 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	WrongAnimal(std::string m_type);
 	WrongAnimal(const WrongAnimal &ref);
 	WrongAnimal& operator=(const WrongAnimal &ref);
-	~WrongAnimal();
+	virtual ~WrongAnimal();
 	std::string getType() const;
 	void makeSound() const;
 };

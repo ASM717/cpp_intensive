@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 14:49:49 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/05 10:50:09 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/11 10:48:09 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	Dog();
 	Dog(const Dog &ref);
 	Dog& operator=(const Dog &ref);
-	~Dog();
+	virtual ~Dog();
 	void makeSound() const;
 };
 

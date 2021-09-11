@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 12:21:26 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/04 12:37:46 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/11 10:49:40 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public:
 	WrongCat();
 	WrongCat(const WrongCat &ref);
 	WrongCat& operator=(const WrongCat &ref);
-	~WrongCat();
+	virtual ~WrongCat();
 	void makeSound() const;
 };
 

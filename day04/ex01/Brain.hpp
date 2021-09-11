@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 14:51:52 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/04 15:15:41 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/11 10:47:09 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public:
 	Brain();
 	Brain(Brain const &ref);
 	Brain &operator=(Brain const &ref);
-	~Brain();
+	virtual ~Brain();
 };
 
 #endif
