@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 12:26:38 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/04 19:10:25 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/11 17:22:43 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,24 @@
 WrongAnimal::WrongAnimal()
 {
 	type = "WrongAnimal";
-	//std::cout << type + " default constructor called" << std::endl;
+	std::cout << type + " default constructor called" << std::endl;
 }
 
 WrongAnimal::WrongAnimal(std::string m_type)
 {
-	//std::cout << "WrongAnimal constructor called" << std::endl;
+	std::cout << "WrongAnimal constructor called" << std::endl;
 	this->type = m_type;
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal &ref)
 {
-	//std::cout << "Animal copy constructor called" << std::endl;
+	std::cout << "Animal copy constructor called" << std::endl;
 	*this = ref;
 }
 
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &ref)
 {
-	//std::cout << "WrongAnimal assignation operator called" << std::endl;
+	std::cout << "WrongAnimal assignation operator called" << std::endl;
 	this->type = ref.getType();
 	return (*this);
 }
@@ -49,5 +49,5 @@ void WrongAnimal::makeSound() const
 
 WrongAnimal::~WrongAnimal()
 {
-	//std::cout << type + " destructor called" << std::endl;
+	std::cout << type + " destructor called" << std::endl;
 }

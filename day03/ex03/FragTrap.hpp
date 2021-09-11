@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 12:55:06 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/03 12:55:07 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/11 17:20:15 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	FragTrap(std::string name);
 	FragTrap(const FragTrap &ref);
 	FragTrap& operator=(const FragTrap &ref);
-	~FragTrap();
+	virtual ~FragTrap();
 	void highFivesGuys(void);
 	void attack(std::string const & target);
 };

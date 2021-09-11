@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 12:21:28 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/04 19:10:43 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/11 17:22:52 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,19 @@
 WrongCat::WrongCat()
 {
 	type = "WrongCat";
-	//std::cout << type + " default constructor called" << std::endl;
+	std::cout << type + " default constructor called" << std::endl;
 }
 
 WrongCat::WrongCat(const WrongCat &ref)
 {
-	//std::cout << "WrongCat copy constructor called" << std::endl;
+	std::cout << "WrongCat copy constructor called" << std::endl;
 	this->WrongAnimal::operator=(ref);
 	*this = ref;
 }
 
 WrongCat &WrongCat::operator=(const WrongCat &ref)
 {
-	//std::cout << "WrongCat assignation operator called" << std::endl;
+	std::cout << "WrongCat assignation operator called" << std::endl;
 	return (*this);
 }
 
@@ -39,5 +39,5 @@ void WrongCat::makeSound() const
 
 WrongCat::~WrongCat()
 {
-	//std::cout << type + " destructor called" << std::endl;
+	std::cout << type + " destructor called" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 12:54:58 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/03 12:54:59 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/11 17:20:10 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
 	DiamondTrap(std::string name);
 	DiamondTrap(const DiamondTrap &ref);
 	DiamondTrap& operator=(const DiamondTrap &ref);
-	~DiamondTrap();
+	virtual ~DiamondTrap();
 	void whoAmI();
 	void attack(std::string const &target);
 };

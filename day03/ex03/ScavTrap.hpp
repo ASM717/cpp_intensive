@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 12:55:22 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/03 12:55:23 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/11 17:20:24 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	ScavTrap(std::string name);
 	ScavTrap(const ScavTrap &ref);
 	ScavTrap& operator=(const ScavTrap &ref);
-	~ScavTrap();
+	virtual ~ScavTrap();
 	void attack(std::string const &target);
 	void guardGate();
 };

@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 12:54:49 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/03 12:54:50 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/11 17:20:03 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
 	ClapTrap(std::string const &name);
 	ClapTrap(const ClapTrap &ref);
 	ClapTrap& operator=(const ClapTrap &ref);
-	~ClapTrap();
+	virtual ~ClapTrap();
 
 	std::string getName();
 	unsigned int getHitpoints();
