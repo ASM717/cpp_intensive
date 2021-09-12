@@ -16,7 +16,6 @@
 
 int main(void)
 {
-	//разобраться с глубоким копированием
 	const Animal* meta = new Animal();
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
@@ -31,6 +30,6 @@ int main(void)
 	delete i;
 	delete meta;
 
-	system("leaks polymorphism");
+	system("leaks deepCopy");
 	return (0);
 }

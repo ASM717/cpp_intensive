@@ -25,13 +25,13 @@ Brain::Brain(const Brain &ref) {
 Brain &Brain::operator=(Brain const &ref)
 {
 	std::cout << "Brain assignation operator called" << std::endl;
-	if (this != &ref)
-	{
-		for (int i = 0; i < 100; i++)
-		{
-			this->called_ideas[i] = ref.called_ideas[i];
-		}
-	}
+//	if (this != &ref)
+//	{
+//		for (int i = 0; i < 100; i++)
+//		{
+//			this->called_ideas[i] = ref.called_ideas[i];
+//		}
+//	}
 	return *this;
 }
 
