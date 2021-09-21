@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 12:55:13 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/03 12:55:14 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/21 18:49:15 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,13 @@ int main(void)
 	diamondTrap1.whoAmI();
 	diamondTrap.attack(diamondTrap1.getName());
 	std::cout << "--------------------------------------------------" << std::endl;
+
+	// ClapTrap *test;
+
+	// test = new DiamondTrap();
+	// delete test;
+
+	// DiamondTrap test1("test");
+	// test1.attack("sfdg");
 	return (0);
 }
