@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 17:35:00 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/21 17:28:07 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/22 16:50:34 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
 	ClapTrap(std::string const &name);
 	ClapTrap(const ClapTrap &ref);
 	ClapTrap& operator=(const ClapTrap &ref);
-	~ClapTrap();
+	virtual ~ClapTrap();
 
 	std::string getName();
 	unsigned int getHitpoints();
@@ -38,7 +38,7 @@ public:
 	void setEnergyPoints(unsigned int energy_points);
 	void setAttackDamage(unsigned int attack_damage);
 
-	void attack(std::string const & target);
+	virtual void attack(std::string const & target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 };

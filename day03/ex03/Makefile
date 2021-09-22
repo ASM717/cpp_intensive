@@ -6,7 +6,7 @@ SRC			= main.cpp ClapTrap.cpp  ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 
 OBJ_NAME	= $(SRC:.cpp=.o)
 
-G++FLAGS	= clang++ -Wall -Wextra -Werror
+G++FLAGS	= clang++ -Wall -Wextra -Werror -Wshadow -Wno-shadow
 
 .c.o:
 			$(G++FLAGS) -c $< -o $(<:.cpp=.o)
