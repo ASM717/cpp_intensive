@@ -6,7 +6,7 @@
 /*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 17:34:57 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/22 18:43:46 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/22 23:44:43 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,12 +59,10 @@ void ClapTrap::takeDamage(unsigned int amount)
 {
 	std::cout << "ClapTrap " + m_name + " take " << amount << " damage "
 	<< m_hitpoints << " hitpoints!" << std::endl;
-	//m_hitpoints -= amount;
 }
 void ClapTrap::beRepaired(unsigned int amount)
 {
 	std::cout << "ClapTrap " + m_name + " has been " << amount << " repaired " << std::endl;
-	//m_hitpoints += amount;
 }
 
 std::string ClapTrap::getName()
