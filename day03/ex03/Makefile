@@ -1,4 +1,4 @@
-NAME		= monster
+NAME		= diamond
 
 INCLUDE		= ClapTrap.hpp ScavTrap.hpp FragTrap.hpp DiamondTrap.hpp
 
