@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 14:49:40 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/05 11:08:02 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/27 18:09:56 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,28 @@ Dog::Dog()
 {
 	m_brain = new Brain();
 	type = "Dog";
-	std::cout << type + " default constructor called" << std::endl;
+	std::cout << "Dog default constructor called" << std::endl;
 }
 
 Dog::Dog(const Dog &ref)
 {
 	std::cout << "Dog copy constructor called" << std::endl;
-	this->Animal::operator=(ref);
 	*this = ref;
 }
 
 Dog &Dog::operator=(const Dog &ref)
 {
 	std::cout << "Dog assignation operator called" << std::endl;
-	return (*this);
+	//проверка на самоприсваивание
+	if (this == &ref)
+		return *this;
+	this->m_brain = new Brain();
+	for (int i = 0; i < 100; ++i)
+	{
+		m_brain->setIdeas(i, m_brain->getIdeas(i));
+	}
+	this->type = ref.getType();
+	return *this;
 }
 
 void Dog::makeSound() const
@@ -39,6 +47,6 @@ void Dog::makeSound() const
 
 Dog::~Dog()
 {
-	std::cout << type + " destructor called" << std::endl;
+	std::cout << "Dog destructor called" << std::endl;
 	delete m_brain;
 }

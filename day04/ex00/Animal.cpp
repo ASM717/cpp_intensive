@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 13:24:54 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/11 17:22:05 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/27 17:41:12 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Animal::Animal()
 {
 	type = "Animal";
-	std::cout << type + " default constructor called" << std::endl;
+	std::cout << "Animal default constructor called" << std::endl;
 }
 
 Animal::Animal(std::string m_type)
@@ -49,5 +49,5 @@ void Animal::makeSound() const
 
 Animal::~Animal()
 {
-	std::cout << type + " destructor called" << std::endl;
+	std::cout << "Animal destructor called" << std::endl;
 }

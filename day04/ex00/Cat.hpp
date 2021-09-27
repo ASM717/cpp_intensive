@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 13:59:05 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/11 10:49:15 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/27 11:07:06 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	Cat(const Cat &ref);
 	Cat& operator=(const Cat &ref);
 	virtual ~Cat();
-	void makeSound() const;
+	virtual void makeSound() const;
 };
 
 #endif

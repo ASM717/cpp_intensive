@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 14:51:52 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/11 10:47:09 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/27 15:43:52 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,14 @@
 class Brain
 {
 private:
-	std::string called_ideas[100];
+	std::string m_called_ideas[100];
 public:
 	Brain();
 	Brain(Brain const &ref);
 	Brain &operator=(Brain const &ref);
-	virtual ~Brain();
+	~Brain();
+	std::string const &getIdeas(int index) const;
+	void setIdeas(int index, std::string ideas);
 };
 
 #endif

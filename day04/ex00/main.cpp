@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 13:23:05 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/04 13:42:32 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/27 11:25:58 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int main(void)
 	const WrongAnimal* wrongAnimal1 = new WrongAnimal();
 
 	const WrongCat* wrongCat = new WrongCat();
-
+	std::cout << "-------------------------------------" << std::endl;
 	std::cout << j->getType() << " " << std::endl;
 	std::cout << i->getType() << " " << std::endl;
 	i->makeSound(); //will output the cat sound!
@@ -34,7 +34,7 @@ int main(void)
 	wrongAnimal->makeSound();
 	wrongAnimal1->makeSound();
 	wrongCat->makeSound();
-
+	std::cout << "-------------------------------------" << std::endl;
 	delete j;
 	delete i;
 	delete meta;
