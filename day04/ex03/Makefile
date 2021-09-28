@@ -1,8 +1,8 @@
-NAME		= abstractAnimal
+NAME		= interface_&_recap
 
-INCLUDE		= AMateria.hpp
+INCLUDE		= AMateria.hpp ICaracter.hpp Cure.hpp Ice.hpp IMateriaSource.hpp
 
-SRC			= main.cpp AMateria.cpp
+SRC			= main.cpp AMateria.cpp Cure.cpp Ice.cpp
 
 OBJ_NAME	= $(SRC:.cpp=.o)
 
