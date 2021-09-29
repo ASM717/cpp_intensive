@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/28 15:29:25 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/28 15:56:19 by amuriel          ###   ########.fr       */
+/*   Created: 2021/09/29 13:36:59 by amuriel           #+#    #+#             */
+/*   Updated: 2021/09/29 13:38:18 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class IMateriaSource
 {
-public:
+	public:
 	virtual ~IMateriaSource() {}
 	virtual void learnMateria(AMateria*) = 0;
 	virtual AMateria* createMateria(std::string const & type) = 0;

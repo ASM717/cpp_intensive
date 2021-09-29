@@ -1,8 +1,8 @@
-NAME		= interface_&_recap
+NAME		= interface
 
-INCLUDE		= AMateria.hpp ICaracter.hpp Cure.hpp Ice.hpp IMateriaSource.hpp
+INCLUDE		= AMateria.hpp Character.hpp Cure.hpp Ice.hpp MateriaSource.hpp IMateriaSource.hpp ICharacter.hpp
 
-SRC			= main.cpp AMateria.cpp Cure.cpp Ice.cpp
+SRC			= main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp
 
 OBJ_NAME	= $(SRC:.cpp=.o)
 

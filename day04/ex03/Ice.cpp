@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 11:59:28 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/28 15:42:11 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/29 15:01:33 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Ice::Ice() : AMateria("ice")
 {
-	std::cout << "Ice default constructor called" << std::endl;
+	std::cout << "Ice constructor called" << std::endl;
 }
 
 Ice::Ice(Ice const &ref) : AMateria(ref)
@@ -36,11 +36,11 @@ AMateria* Ice::clone() const
 
 void Ice::use(ICharacter& target)
 {
-	std::cout << "* heals " << target.getName() << "’s wounds *" << std::endl;
-	this->AMateria::use(target);
+	(void)target;
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }
 
 Ice::~Ice()
 {
-	std::cout << "Cure desctructor called" << std::endl;
+	std::cout << "Ice desctructor called" << std::endl;
 }

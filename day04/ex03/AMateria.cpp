@@ -6,15 +6,16 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 18:40:35 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/28 11:22:04 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/29 14:59:55 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
 
-AMateria::AMateria()
+AMateria::AMateria(std::string const &type)
 {
-	std::cout << "AMateria default constructor called" << std::endl;
+	m_type = type;
+	std::cout << "AMateria constructor called" << std::endl;
 }
 
 std::string	const & AMateria::getType() const
@@ -38,7 +39,8 @@ AMateria &AMateria::operator=(AMateria const &ref)
 	return *this;
 }
 
-void AMateria::use(ICharacter& target){
+void AMateria::use(ICharacter& target)
+{
 	(void)target;
 	std::cout << "AMateria use" << std::endl;
 }
