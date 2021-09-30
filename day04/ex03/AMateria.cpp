@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 18:40:35 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/29 14:59:55 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/30 12:05:37 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ AMateria &AMateria::operator=(AMateria const &ref)
 void AMateria::use(ICharacter& target)
 {
 	(void)target;
-	std::cout << "AMateria use" << std::endl;
+	std::cout << "AMateria use " + target.getName() << std::endl;
 }
 
 AMateria::~AMateria()

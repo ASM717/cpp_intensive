@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 18:40:31 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/29 13:53:18 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/30 10:50:01 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class AMateria
 protected:
 	std::string m_type;
 public:
-	// AMateria();//?
+	AMateria(){}
 	AMateria(std::string const & type);
 	AMateria(AMateria const &ref);
 	AMateria & operator=(AMateria const &ref);

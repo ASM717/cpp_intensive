@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 15:31:24 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/29 14:54:57 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/30 12:18:40 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ MateriaSource::MateriaSource(MateriaSource const &ref)
 MateriaSource &MateriaSource::operator=(MateriaSource const &ref)
 {
 	std::cout << "MateriaSource assignation operator called" << std::endl;
+	if (this == &ref)
+		return *this;
 	if (this != &ref)
 	{
 		for (int i = 0; i < 4; i++)
@@ -59,7 +61,7 @@ AMateria *MateriaSource::createMateria(std::string const &type_mat)
 {
 	for (int i = 0; i < 4; ++i)
 	{
-		if (this->m_materia_src[i] != NULL && this->m_materia_src[i]->getType() == type_mat)
+		if (this->m_materia_src[i] && this->m_materia_src[i]->getType() == type_mat)
 			return (this->m_materia_src[i]->clone());
 	}
 	return (NULL);

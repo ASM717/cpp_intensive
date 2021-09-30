@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 15:50:43 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/29 13:21:02 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/30 10:51:06 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ class Character : public ICharacter
 private:
 	std::string m_name;
 	AMateria *m_materia[4];
-	Character() {}; //????
 public:
+	Character() {}
 	Character(std::string const & name);
 	Character(Character const & ref);
 	Character& operator=(Character const & ref);

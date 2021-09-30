@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 13:36:59 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/29 13:38:18 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/30 13:00:37 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class IMateriaSource
 {
-	public:
+public:
 	virtual ~IMateriaSource() {}
 	virtual void learnMateria(AMateria*) = 0;
 	virtual AMateria* createMateria(std::string const & type) = 0;

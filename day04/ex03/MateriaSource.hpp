@@ -6,12 +6,15 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 15:31:20 by amuriel           #+#    #+#             */
-/*   Updated: 2021/09/29 13:17:22 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/09/30 13:09:31 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MATERIASOURCE_HPP
 #define MATERIASOURCE_HPP
+
+#define RED "\x1b[31m"
+#define YEL "\x1B[33m"
 
 #include "IMateriaSource.hpp"
 
