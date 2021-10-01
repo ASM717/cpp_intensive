@@ -1,6 +1,6 @@
 # cpp_intensive | school 21
 
-### 0 module: 
+### 0 module:
     Namespace, class, member functions, stdio stream, initialization lists, static, const
 ### 1 module:
     Memory allocation, references, pointers to members, switch
@@ -10,3 +10,5 @@
     Inheritance
 ### 4 module:
     Polymorphism, abstract classes, interfaces
+### 5 module:
+    Repetition and Exceptions
