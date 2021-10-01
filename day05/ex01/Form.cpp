@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 13:29:42 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/01 14:06:11 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/01 18:00:17 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,12 @@
 
 Form::Form() : m_formName("default"), m_signGrade(150), m_execGrade(150), m_signed(false)
 {
-//	m_formName = "default";
-//	m_signGrade = 150;
-//	m_execGrade = 150;
-//	m_signed = false;
+
 }
 
 Form::Form(std::string const &formName, int signGrade, int execGrade) :
 m_formName(formName), m_signGrade(signGrade), m_execGrade(execGrade), m_signed(false)
 {
-//	m_formName = formName;
-//	m_signGrade = signGrade;
-//	m_execGrade = execGrade;
-//	m_signed = isSigned;
 	if (m_execGrade < 1 || m_signGrade < 1)
 		throw Form::GradeTooHighException();
 	if (m_execGrade > 150 || m_signGrade > 150)
@@ -34,13 +27,9 @@ m_formName(formName), m_signGrade(signGrade), m_execGrade(execGrade), m_signed(f
 }
 
 Form::Form(Form const &ref) :
-m_formName(ref.m_formName), m_signGrade(ref.m_signGrade),
-m_execGrade(ref.m_execGrade), m_signed(ref.m_signed)
+	m_formName(ref.m_formName), m_signGrade(ref.m_signGrade),
+		m_execGrade(ref.m_execGrade), m_signed(ref.m_signed)
 {
-//	m_formName = ref.m_formName;
-//	m_signed = ref.m_signed;
-//	m_signGrade = ref.m_signGrade;
-//	m_execGrade = ref.m_execGrade;
 	*this = ref;
 	if (m_execGrade < 1 || m_signGrade < 1)
 		throw Form::GradeTooHighException();

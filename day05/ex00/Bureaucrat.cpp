@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 11:20:15 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/01 13:24:55 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/01 17:58:32 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Bureaucrat::Bureaucrat(std::string const &name, int grade)
 	m_name = name;
 	m_grade = grade;
 	if (m_grade < 1)
-		throw GradeTooHighException;
+		throw GradeTooHighException();
 	if (m_grade > 150)
 		throw GradeTooLowException();
 }
@@ -36,7 +36,7 @@ Bureaucrat &Bureaucrat::operator=(Bureaucrat const &ref)
 	m_name = ref.m_name;
 	m_grade = ref.m_grade;
 	if (m_grade < 1)
-		throw GradeTooHighException;
+		throw GradeTooHighException();
 	if (m_grade > 150)
 		throw GradeTooLowException();
 	return *this;
@@ -63,7 +63,7 @@ void Bureaucrat::setGrade(int grade)
 {
 	m_grade = grade;
 	if (m_grade < 1)
-		throw GradeTooHighException;
+		throw GradeTooHighException();
 	if (m_grade > 150)
 		throw GradeTooLowException();
 }
@@ -72,14 +72,14 @@ void Bureaucrat::incrementGrade()
 {
 	m_grade++;
 	if (m_grade > 150)
-		throw GradeTooLowException;
+		throw GradeTooLowException();
 }
 
 void Bureaucrat::decrementGrade()
 {
 	m_grade--;
 	if (m_grade < 1)
-		throw GradeTooHighException;
+		throw GradeTooHighException();
 }
 
 const char* Bureaucrat::GradeTooHighException::what() const throw()

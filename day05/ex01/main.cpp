@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 11:16:22 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/01 13:13:15 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/01 18:02:21 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,12 @@ int main()
 //		std::cout << form_test1 << "\n";
 		test.signForm(form_test1);
 
-//		Form form_test2("form_test2", 0, 3);
-//		Form form_test3("form_test3", 3, 200);
+		Form form_test2("form_test2", 0, 3);
+		Form form_test3("form_test3", 3, 200);
 	}
 	catch (std::exception &e)
 	{
-		std::cout << e.what() << '\n';
+		std::cout << e.what() << std::endl;
 	}
 	return 0;
 }
