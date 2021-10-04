@@ -6,7 +6,7 @@
 /*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 11:16:22 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/01 18:02:21 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/04 20:43:20 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,32 +15,33 @@
 
 int main()
 {
-//	try
-//	{
-//		Bureaucrat burocrat("Grigoriy", 149);
-//		std::cout << burocrat << std::endl;
-//	}
-//	catch(std::exception const &exception)
-//	{
-//		std::cerr << exception.what() << std::endl;
-//	}
-
 	try
 	{
-		Bureaucrat test("test", 5);
-		Form form_test1("form_test1", 1, 1);
-
-//		std::cout << form_test1 << "\n";
-		form_test1.beSigned(test);
-//		std::cout << form_test1 << "\n";
-		test.signForm(form_test1);
-
-		Form form_test2("form_test2", 0, 3);
-		Form form_test3("form_test3", 3, 200);
+		Bureaucrat burocrat("Grigoriy", 149);
+		std::cout << burocrat << std::endl;
+		Form form_1("Paper_1", 150, 150);
+		std::cout << form_1 << std::endl;
+		form_1.beSigned(burocrat);
+		burocrat.signForm(form_1);
 	}
-	catch (std::exception &e)
+	catch(std::exception const &exception)
 	{
-		std::cout << e.what() << std::endl;
+		std::cerr << exception.what() << std::endl;
 	}
+	std::cout << "------------------------------------------" << std::endl;
+	try
+	{
+		Bureaucrat burocrat_2("Vladimir", 100);
+		std::cout << burocrat_2 << std::endl;
+		Form form_2("Paper_2", -1, -1);
+		std::cout << form_2 << std::endl;
+		form_2.beSigned(burocrat_2);
+		burocrat_2.signForm(form_2);
+	}
+	catch(std::exception const &exception)
+	{
+		std::cerr << exception.what() << std::endl;
+	}
+
 	return 0;
 }
