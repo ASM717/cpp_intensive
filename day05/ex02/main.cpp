@@ -6,7 +6,7 @@
 /*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 10:31:05 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/05 19:39:51 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/05 22:16:52 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,10 @@ int main()
 		president->beSigned(buro_crat_1);
 		std::cout << *president << std::endl;
 		president->execute(buro_crat_2);
+
+		delete tree_ascii;
+		delete robot;
+		delete president;
 	}
 	catch (std::exception &e)
 	{
