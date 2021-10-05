@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 15:49:10 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/05 18:44:25 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/05 22:14:15 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,11 +54,10 @@ AForm *Intern::makeForm(std::string const &form_name, std::string const &target)
 		{"robotomy request", &makeRobotForm},
 		{"shrubbery creation", &makeShrubberyForm}
 	};
-	int i;
-	for (i = 0; i < 3; i++) {
+	for (int i = 0; i < 3; i++) {
 		if (form_name == forms[i].form_name)
 		{
-			std::cout << "Intern creates " << form_name << std::endl;
+			std::cout << "Intern creates " << form_name << " form" << std::endl;
 			return (forms[i].func(target));
 		}
 	}
@@ -71,7 +70,4 @@ const char* Intern::RequestedFormIsNotKnown::what() const throw()
 	return RED"Requested form is not known!";
 }
 
-Intern::~Intern()
-{
-
-}
+Intern::~Intern(){}

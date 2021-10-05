@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 14:13:35 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/05 15:17:04 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/05 19:43:36 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
+#include <cstdlib>
 
 RobotomyRequestForm::RobotomyRequestForm(std::string target) :
 AForm("RobotomyRequestForm", 72, 45)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 10:31:05 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/05 15:44:58 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/05 19:39:51 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int main()
 {
 	try
 	{
-		Bureaucrat buro_crat_1("Grigoriy", 1);
-		Bureaucrat buro_crat_2("Vladimir", 10);
+		Bureaucrat buro_crat_1("Grigoriy", 20);
+		Bureaucrat buro_crat_2("Vladimir", 25);
 		std::cout << buro_crat_1 << std::endl;
 		std::cout << buro_crat_2 << std::endl;
 		AForm *tree_ascii = new ShrubberyCreationForm("Home");
