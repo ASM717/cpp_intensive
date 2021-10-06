@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 10:31:05 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/06 12:28:03 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/06 18:31:51 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int main()
 		AForm* rrf;
 		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
 		AForm* scf;
-		scf = someRandomIntern.makeForm("shrubbery creation", "FasBender");
+		scf = someRandomIntern.makeForm("shrubbery creation", "Garden");
 		AForm* ppf;
 		ppf = someRandomIntern.makeForm("presidential pardon", "Jarvis");
 		AForm* ppf_err;
