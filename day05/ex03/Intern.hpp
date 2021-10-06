@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 15:49:08 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/05 18:35:39 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/06 10:42:47 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,6 @@ public:
 	Intern& operator=(Intern const &ref);
 	~Intern();
 	AForm *makeForm(std::string const &form, std::string const &target);
-	// AForm* makePresidentForm(std::string target);
-	// AForm* makeRobotForm(std::string target);
-	// AForm* makeShrubberyForm(std::string target);
 	class RequestedFormIsNotKnown : public std::exception
 	{
 	public:
