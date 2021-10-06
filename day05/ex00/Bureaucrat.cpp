@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 11:20:15 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/01 17:58:32 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/06 13:55:07 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 Bureaucrat::Bureaucrat(){}
 
-Bureaucrat::Bureaucrat(std::string const &name, int grade)
+Bureaucrat::Bureaucrat(std::string const &name, int grade) : m_name(name)
 {
-	m_name = name;
 	m_grade = grade;
 	if (m_grade < 1)
 		throw GradeTooHighException();
@@ -24,7 +23,7 @@ Bureaucrat::Bureaucrat(std::string const &name, int grade)
 		throw GradeTooLowException();
 }
 
-Bureaucrat::Bureaucrat(Bureaucrat const &ref)
+Bureaucrat::Bureaucrat(Bureaucrat const &ref) : m_name(ref.m_name)
 {
 	*this = ref;
 }
@@ -33,7 +32,6 @@ Bureaucrat &Bureaucrat::operator=(Bureaucrat const &ref)
 {
 	if (this == &ref)
 		return *this;
-	m_name = ref.m_name;
 	m_grade = ref.m_grade;
 	if (m_grade < 1)
 		throw GradeTooHighException();
@@ -47,11 +45,6 @@ Bureaucrat::~Bureaucrat(){}
 std::string const & Bureaucrat::getName() const
 {
 	return m_name;
-}
-
-void Bureaucrat::setName(std::string name)
-{
-	m_name = name;
 }
 
 int Bureaucrat::getGrade() const

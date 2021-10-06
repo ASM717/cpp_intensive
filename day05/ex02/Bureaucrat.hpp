@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 11:20:19 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/05 14:55:47 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/06 14:01:59 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class AForm;
 class Bureaucrat
 {
 private:
-	std::string m_name;
+	std::string const m_name;
 	int m_grade;
 public:
 	Bureaucrat();
@@ -37,7 +37,6 @@ public:
 	Bureaucrat &operator=(Bureaucrat const &ref);
 	virtual ~Bureaucrat();
 	std::string const & getName() const;
-	void setName(std::string name);
 	int getGrade() const;
 	void setGrade(int grade);
 	void incrementGrade();
