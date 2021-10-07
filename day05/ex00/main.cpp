@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 11:16:22 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/07 15:40:45 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/07 20:39:20 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int main()
 {
 	try
 	{
-		Bureaucrat burocrat("Grigoriy", 150);
+		Bureaucrat burocrat("Grigoriy", 0);
 		std::cout << burocrat << std::endl;
 		burocrat.incrementGrade();
 		std::cout << burocrat << std::endl;
@@ -45,7 +45,7 @@ int main()
 	}
 	try
 	{
-		Bureaucrat burocrat3("Alexandr", 1);
+		Bureaucrat burocrat3("Alexandr", 150);
 		std::cout << burocrat3 << std::endl;
 		burocrat3.decrementGrade();
 		std::cout << burocrat3 << std::endl;
@@ -54,4 +54,5 @@ int main()
 	{
 		std::cerr << exception.what() << std::endl;
 	}
+	return (0);
 }
