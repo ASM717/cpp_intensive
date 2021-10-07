@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 11:07:28 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/07 13:06:46 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/07 18:19:32 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,18 @@
 #define SCALAR_CONVERSION_HPP
 
 #include <iostream>
+#include <cmath>
 
 class ScalarConversion
 {
 private:
+	std::string m_value;
 
 public:
 	ScalarConversion();
+	ScalarConversion(std::string value);
 	~ScalarConversion();
+	std::string getValue();
 
 
 	class ImpossibleExcep : public std::exception
@@ -48,5 +52,7 @@ public:
 		}
 	};
 };
+
+std::ostream& operator<<(std::ostream& out, ScalarConversion& src);
 
 #endif
