@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 11:20:15 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/06 14:02:46 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/07 15:42:26 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,14 +63,14 @@ void Bureaucrat::setGrade(int grade)
 
 void Bureaucrat::incrementGrade()
 {
-	m_grade++;
+	m_grade--;
 	if (m_grade > 150)
 		throw GradeTooLowException();
 }
 
 void Bureaucrat::decrementGrade()
 {
-	m_grade--;
+	m_grade++;
 	if (m_grade < 1)
 		throw GradeTooHighException();
 }

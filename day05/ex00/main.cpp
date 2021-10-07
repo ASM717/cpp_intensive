@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 11:16:22 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/05 10:54:14 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/07 15:40:45 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int main()
 		Bureaucrat burocrat("Grigoriy", 150);
 		std::cout << burocrat << std::endl;
 		burocrat.incrementGrade();
+		std::cout << burocrat << std::endl;
 	}
 	catch(std::exception const &exception)
 	{
@@ -47,6 +48,7 @@ int main()
 		Bureaucrat burocrat3("Alexandr", 1);
 		std::cout << burocrat3 << std::endl;
 		burocrat3.decrementGrade();
+		std::cout << burocrat3 << std::endl;
 	}
 	catch(std::exception const &exception)
 	{
