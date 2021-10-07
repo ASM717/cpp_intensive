@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 10:31:05 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/06 12:28:03 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/07 10:19:05 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,10 @@ int main()
 		scf = someRandomIntern.makeForm("shrubbery creation", "FasBender");
 		AForm* ppf;
 		ppf = someRandomIntern.makeForm("presidential pardon", "Jarvis");
+		Bureaucrat bureaucrat_1("Grigiriy", 1);
+		Bureaucrat bureaucrat_2("Vladimir", 151);
+		std::cout << bureaucrat_1 << std::endl;
+		std::cout << bureaucrat_2 << std::endl;
 		AForm* ppf_err;
 		ppf_err = someRandomIntern.makeForm("presidential ", "Jarvis");
 
