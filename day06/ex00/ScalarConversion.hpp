@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 11:07:28 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/07 18:19:32 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/08 18:43:36 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,14 @@ private:
 
 public:
 	ScalarConversion();
-	ScalarConversion(std::string value);
+	ScalarConversion(std::string &value);
 	~ScalarConversion();
 	std::string getValue();
 
+	char toChar();
+	int toInteger();
+	float toFloat();
+	double toDouble();
 
 	class ImpossibleExcep : public std::exception
 	{

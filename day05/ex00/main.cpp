@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 11:16:22 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/07 20:39:20 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/08 16:09:21 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int main()
 {
 	try
 	{
-		Bureaucrat burocrat("Grigoriy", 0);
+		Bureaucrat burocrat("Grigoriy", 1);
 		std::cout << burocrat << std::endl;
 		burocrat.incrementGrade();
 		std::cout << burocrat << std::endl;
