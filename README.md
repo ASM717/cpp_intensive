@@ -12,3 +12,5 @@
     Polymorphism, abstract classes, interfaces
 ### 5 module:
     Repetition and Exceptions
+### 6 module:
+    Casts
