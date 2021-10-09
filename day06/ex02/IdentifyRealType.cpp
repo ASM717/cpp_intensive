@@ -6,7 +6,7 @@
 /*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 14:42:26 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/09 19:08:31 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/09 19:30:13 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void identify(Base &p)
 		std::cout << "A" << std::endl;
 		flag = true;
 	}
-	catch (std::exception & e){}
+	catch (std::exception &e){}
 	try
 	{
 		B &b = dynamic_cast<B &>(p);
@@ -55,7 +55,7 @@ void identify(Base &p)
 		std::cout << "B" << std::endl;
 		flag = true;
 	}
-	catch (std::exception & e){}
+	catch (std::exception &e){}
 	try
 	{
 		C &c = dynamic_cast<C &>(p);
