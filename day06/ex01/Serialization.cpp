@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Serialization.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 13:16:03 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/09 16:31:27 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/09 19:14:58 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,9 @@ int main()
 	std::cout << d1 << std::endl;
 	std::cout << d1->num << std::endl;
 	std::cout << d1->str << std::endl;
+
+	// if (d == d1)
+	// 	std::cout << "OK" << std::endl;
 	delete d1;
 	return (0);
 }

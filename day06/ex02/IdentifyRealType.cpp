@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   IdentifyRealType.cpp                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 14:42:26 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/09 15:31:00 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/09 19:08:31 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 Base *generate(void)
 {
 	srand(time(NULL));
-	int num = rand() % 3;
-	if (num == 0)
+	int num_class = rand() % 3;
+	if (num_class == 0)
 		return new A();
-	else if (num == 1)
+	else if (num_class == 1)
 		return new B();
 	else
 		return new C();
@@ -73,6 +73,10 @@ int main()
 	Base *base = generate();
 	identify(base);
 	identify(*base);
+
+	identify(NULL);
+	identify(0);
+
 	delete base;
 	//system("leaks realtype");
 	return 0;
