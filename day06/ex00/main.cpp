@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 16:44:24 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/09 14:03:09 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/09 15:25:38 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,14 @@
 
 int main(int argc, char **argv)
 {
-
 	if(argc == 2)
 	{
 		std::string arg = argv[1];
+		if (arg.size() == 0)
+		{
+			std::cerr << "Error: String is empty!" << std::endl;
+			return (1);
+		}
 		try
 		{
 			if ((arg[0] < 48 || arg[0] > 57) && arg.size() == 1)
@@ -37,13 +41,16 @@ int main(int argc, char **argv)
 				conversion.toFloat();
 				conversion.toDouble();
 			}
-
 		}
 		catch(const std::exception& e)
 		{
-			std::cerr << e.what() << '\n';
+			std::cerr << e.what() << std::endl;
 		}
 	}
 	else
-		std::cerr << "Error: Too much arguments!" << std::endl;
+	{
+		std::cerr << "Error: You must enter one argument!" << std::endl;
+		return (1);
+	}
+	return (0);
 }
