@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 13:17:21 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/09 13:17:39 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/09 16:21:23 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@
 
 typedef struct s_Data
 {
-	int n;
+	int num;
+	std::string str;
 } Data;
 
 uintptr_t serialize(Data* ptr);

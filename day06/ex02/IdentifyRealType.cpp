@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 14:42:26 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/09 15:07:11 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/09 15:31:00 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void identify(Base *p)
 		std::cout << "B" << std::endl;
 	else if (dynamic_cast<C *>(p))
 		std::cout << "C" << std::endl;
+	else std::cerr << "Not identify!" << std::endl;
 }
 
 void identify(Base &p)
@@ -64,7 +65,7 @@ void identify(Base &p)
 	}
 	catch (std::exception &e){}
 	if (flag == false)
-		std::cout << "Nothing to output!" << std::endl;
+		std::cout << "Not identify!" << std::endl;
 }
 
 int main()
