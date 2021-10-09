@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 11:07:28 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/08 18:43:36 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/09 13:56:56 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,42 +19,22 @@
 class ScalarConversion
 {
 private:
-	std::string m_value;
-
-public:
+	float m_value;
+	char m_char_value;
 	ScalarConversion();
-	ScalarConversion(std::string &value);
+public:
+	ScalarConversion(float value);
+	ScalarConversion(char char_value);
+	ScalarConversion(ScalarConversion const &ref);
+	ScalarConversion &operator=(ScalarConversion const &ref);
 	~ScalarConversion();
-	std::string getValue();
+	float getValue();
+	char getCharValue();
 
-	char toChar();
-	int toInteger();
-	float toFloat();
-	double toDouble();
-
-	class ImpossibleExcep : public std::exception
-	{
-		const char *what() const throw()
-		{
-			return "impossible";
-		}
-	};
-
-	class NotDisplayableExcep : public std::exception
-	{
-		const char *what() const throw()
-		{
-			return "Non displayable";
-		}
-	};
-
-	class ErrorArgExcep : public std::exception
-	{
-		const char *what() const throw()
-		{
-			return "Error argument!";
-		}
-	};
+	void toChar();
+	void toInteger();
+	void toFloat();
+	void toDouble();
 };
 
 std::ostream& operator<<(std::ostream& out, ScalarConversion& src);

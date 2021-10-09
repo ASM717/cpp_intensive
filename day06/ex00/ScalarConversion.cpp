@@ -6,117 +6,124 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 11:07:32 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/08 19:35:32 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/09 14:08:53 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConversion.hpp"
 
-ScalarConversion::ScalarConversion(){}
-
-ScalarConversion::ScalarConversion(std::string &value)
+ScalarConversion::ScalarConversion(float value)
 {
 	m_value = value;
+	m_char_value = 0;
 }
 
-std::string ScalarConversion::getValue()
+ScalarConversion::ScalarConversion(char char_value)
 {
-	return m_value;
+	m_char_value = char_value;
+	m_value = 0;
+}
+
+ScalarConversion::ScalarConversion(ScalarConversion const &ref)
+{
+	*this = ref;
+}
+
+ScalarConversion &ScalarConversion::operator=(ScalarConversion const &ref)
+{
+	if (this == &ref)
+		return *this;
+	m_value = ref.m_value;
+	m_char_value = ref.m_char_value;
+	return *this;
 }
 
 ScalarConversion::~ScalarConversion(){}
 
-int isDouble(std::string value)
+float ScalarConversion::getValue()
 {
-	for (size_t i = 0; i < value.size(); i++)
+	return m_value;
+}
+
+char ScalarConversion::getCharValue()
+{
+	return m_char_value;
+}
+
+void ScalarConversion::toChar()
+{
+	if (getValue())
 	{
-		if (!(isdigit(value[i]) && value[i] != '.'))
-			return (0);
+		if (std::isprint(getValue()))
+			std::cout << "char: " << "'" << static_cast<char>(getValue()) << "'" << std::endl;
+		else if (isnan(getValue()))
+			std::cout << "char: " << "impossible" << std::endl;
+		else
+			std::cout << "char: " << "Non displayable" << std::endl;
 	}
-	return (1);
-}
-
-int isFloat(std::string value)
-{
-	for (size_t i = 0; i < value.size() - 1; i++)
+	if (getCharValue())
 	{
-		if (!(isdigit(value[i]) || value[i] != '.'))
-			return (0);
+		if (std::isprint(getCharValue()))
+			std::cout << "char: " << "'" << static_cast<char>(getCharValue()) << "'" << std::endl;
+		else if (isnan(getCharValue()))
+			std::cout << "char: " << "impossible" << std::endl;
+		else
+			std::cout << "char: " << "Non displayable" << std::endl;
 	}
-	if (value[value.size() - 1] != 'f')
-		return (0);
-	return (1);
 }
 
-// int isInteger(std::string value)
-// {
-// 	for (size_t i = 0; i < value.size(); i++)
-// 	{
-// 		if (!(isdigit(value[i])))
-// 			return (0);
-// 	}
-// 	return (1);
-// }
-
-int ScalarConversion::toInteger()
+void ScalarConversion::toInteger()
 {
-	if(!isInteger(m_value))
-		return (0);
-	if(!isdigit(m_value[0]))
-		return (0);
-	float i_n = std::stof(m_value);
-	int intNumber = static_cast<int>(i_n);
-	if ((intNumber == -2147483648) || (intNumber == 2147483647) || (std::isnan(intNumber)))
-		std::cout << "int: " << "impossible" << std::endl;
-	else
-		std::cout << "int: " << intNumber << std::endl;
-	return intNumber;
+	if (getValue())
+	{
+		if (isnan(getValue()) || INT_MAX < getValue() || INT_MIN > getValue())
+			std::cout << "int: " << "impossible" << std::endl;
+		else
+			std::cout << "int: " << static_cast<int>(getValue()) << std::endl;
+	}
+	if (getCharValue())
+	{
+		if (isnan(getCharValue()) || INT_MAX < static_cast<int>(getCharValue()) || INT_MIN > static_cast<int>(getCharValue()))
+			std::cout << "int: " << "impossible" << std::endl;
+		else
+			std::cout << "int: " << static_cast<int>(getCharValue()) << std::endl;
+	}
 }
 
-float ScalarConversion::toFloat()
+void ScalarConversion::toFloat()
 {
-	if (isFloat(m_value))
-		return (0);
-	float f_n = std::stof(m_value);
-	float floatNumber = static_cast<float>(f_n);
-	if (std::roundf(floatNumber) == floatNumber)
-		std::cout << "float: " << floatNumber << ".0f" << std::endl;
-	else std::cout << "float: " << floatNumber << "f" << std::endl;
-
-	return floatNumber;
+	if (getValue())
+	{
+		if (getValue() - static_cast<float>(getValue()) == 0.0)
+			std::cout << "float: " << getValue() << ".0" << "f" << std::endl;
+		else
+			std::cout << "float: " << getValue() << "f" << std::endl;
+	}
+	if (getCharValue())
+	{
+		if (static_cast<int>(getCharValue()) - static_cast<float>(getCharValue()) == 0.0)
+			std::cout << "float: " << static_cast<int>(getCharValue()) << ".0" << "f" << std::endl;
+		else
+			std::cout << "float: " << static_cast<int>(getCharValue()) << "f" << std::endl;
+	}
 }
 
-char ScalarConversion::toChar()
+void ScalarConversion::toDouble()
 {
-	if(m_value.size() != 1 || isdigit(m_value[0]) == false)
-		return (0);
-	float c_n = std::stof(m_value);
-	char characher = static_cast<char>(c_n);
-	if (c_n == std::numeric_limits<float>::infinity()
-		|| c_n == -std::numeric_limits<float>::infinity()
-		|| std::isnan(c_n))
-		std::cout << "char: " << "impossible" << std::endl;
-	else if (characher <= 32 || characher >= 127)
-		std::cout << "char: " <<  "Non displayable" << std::endl;
-	else if (!(std::isprint(characher)))
-		std::cout << "char: " << "impossible" << std::endl;
-	else
-		std::cout << "char: " << "'" << characher << "'" << std::endl;
-	return (characher);
-
-}
-
-double ScalarConversion::toDouble()
-{
-	if (isDouble(m_value))
-		return (0);
-	double d_n = std::stod(m_value);
-	double doubleNumber = static_cast<double>(d_n);
-	if (std::roundf(doubleNumber) == doubleNumber)
-		std::cout << "double: " << doubleNumber << ".0" << std::endl;
-	else std::cout << "double: " << doubleNumber << std::endl;
-
-	return doubleNumber;
+	if (getValue())
+	{
+		if (getValue() - static_cast<double>(getValue()) == 0.0)
+			std::cout << "double: " << getValue() << ".0" << std::endl;
+		else
+			std::cout << "double: " << getValue() << std::endl;
+	}
+	if (getCharValue())
+	{
+		if (getCharValue() - static_cast<double>(getCharValue()) == 0.0)
+			std::cout << "double: " << static_cast<int>(getCharValue()) << ".0" << std::endl;
+		else
+			std::cout << "double: " << static_cast<int>(getCharValue()) << std::endl;
+	}
 }
 
 std::ostream& operator<<(std::ostream& out, ScalarConversion& src)
