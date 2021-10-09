@@ -14,3 +14,5 @@
     Repetition and Exceptions
 ### 6 module:
     Casts
+### 7 module:
+    Templates
