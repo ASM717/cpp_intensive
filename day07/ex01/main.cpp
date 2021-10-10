@@ -11,5 +11,5 @@ int main()
 	int array[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 	iter(array, 10, print_array);
 	std::cout << std::endl << std::endl;
-	return 0;
+	return (0);
 }
