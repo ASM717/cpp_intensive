@@ -33,20 +33,18 @@ int main()
 	unsigned int char_arr_size = arr_char.size();
 	std::cout << "\t\tchar_array size = " << char_arr_size << std::endl;
 
-	Array<char> arr_char2;
-	arr_char2 = arr_char;
+	//проверка на пустоту
 
 	try
 	{
-		arr_char2[10];
+		Array<unsigned int> test(100);
+		test[100];
 	}
 	catch(const std::exception& e)
 	{
 		std::cerr << e.what() << '\n';
 	}
 
-	//проверка на пустоту
-	Array<int> test(0);
 
 	system("leaks array");
 	return (0);
