@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 11:07:32 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/09 14:08:53 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/11 12:17:10 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,14 @@ ScalarConversion::ScalarConversion(float value)
 {
 	m_value = value;
 	m_char_value = 0;
+	m_flag = 1;
 }
 
 ScalarConversion::ScalarConversion(char char_value)
 {
 	m_char_value = char_value;
 	m_value = 0;
+	m_flag = 0;
 }
 
 ScalarConversion::ScalarConversion(ScalarConversion const &ref)
@@ -50,22 +52,27 @@ char ScalarConversion::getCharValue()
 	return m_char_value;
 }
 
+bool ScalarConversion::getFlag()
+{
+	return m_flag;
+}
+
 void ScalarConversion::toChar()
 {
-	if (getValue())
+	if (getFlag())
 	{
 		if (std::isprint(getValue()))
 			std::cout << "char: " << "'" << static_cast<char>(getValue()) << "'" << std::endl;
-		else if (isnan(getValue()))
+		else if (isnan(getValue()) || INT_MAX < getValue() || INT_MIN > getValue())
 			std::cout << "char: " << "impossible" << std::endl;
 		else
 			std::cout << "char: " << "Non displayable" << std::endl;
 	}
-	if (getCharValue())
+	if (!getFlag())
 	{
 		if (std::isprint(getCharValue()))
 			std::cout << "char: " << "'" << static_cast<char>(getCharValue()) << "'" << std::endl;
-		else if (isnan(getCharValue()))
+		else if (isnan(getValue()))
 			std::cout << "char: " << "impossible" << std::endl;
 		else
 			std::cout << "char: " << "Non displayable" << std::endl;
@@ -74,14 +81,14 @@ void ScalarConversion::toChar()
 
 void ScalarConversion::toInteger()
 {
-	if (getValue())
+	if (getFlag())
 	{
 		if (isnan(getValue()) || INT_MAX < getValue() || INT_MIN > getValue())
 			std::cout << "int: " << "impossible" << std::endl;
 		else
 			std::cout << "int: " << static_cast<int>(getValue()) << std::endl;
 	}
-	if (getCharValue())
+	if (!getFlag())
 	{
 		if (isnan(getCharValue()) || INT_MAX < static_cast<int>(getCharValue()) || INT_MIN > static_cast<int>(getCharValue()))
 			std::cout << "int: " << "impossible" << std::endl;
@@ -92,14 +99,14 @@ void ScalarConversion::toInteger()
 
 void ScalarConversion::toFloat()
 {
-	if (getValue())
+	if (getFlag())
 	{
-		if (getValue() - static_cast<float>(getValue()) == 0.0)
+		if (static_cast<int>(getValue()) - static_cast<float>(getValue()) == 0.0)
 			std::cout << "float: " << getValue() << ".0" << "f" << std::endl;
 		else
 			std::cout << "float: " << getValue() << "f" << std::endl;
 	}
-	if (getCharValue())
+	if (!getFlag())
 	{
 		if (static_cast<int>(getCharValue()) - static_cast<float>(getCharValue()) == 0.0)
 			std::cout << "float: " << static_cast<int>(getCharValue()) << ".0" << "f" << std::endl;
@@ -110,16 +117,16 @@ void ScalarConversion::toFloat()
 
 void ScalarConversion::toDouble()
 {
-	if (getValue())
+	if (getFlag())
 	{
-		if (getValue() - static_cast<double>(getValue()) == 0.0)
+		if (static_cast<int>(getValue()) - static_cast<double>(getValue()) == 0.0)
 			std::cout << "double: " << getValue() << ".0" << std::endl;
 		else
 			std::cout << "double: " << getValue() << std::endl;
 	}
-	if (getCharValue())
+	if (!getFlag())
 	{
-		if (getCharValue() - static_cast<double>(getCharValue()) == 0.0)
+		if (static_cast<int>(getCharValue()) - static_cast<double>(getCharValue()) == 0.0)
 			std::cout << "double: " << static_cast<int>(getCharValue()) << ".0" << std::endl;
 		else
 			std::cout << "double: " << static_cast<int>(getCharValue()) << std::endl;

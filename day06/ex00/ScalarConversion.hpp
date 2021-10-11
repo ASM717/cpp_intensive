@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 11:07:28 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/09 13:56:56 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/11 12:09:59 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 class ScalarConversion
 {
 private:
+	bool m_flag;
 	float m_value;
 	char m_char_value;
 	ScalarConversion();
@@ -30,7 +31,7 @@ public:
 	~ScalarConversion();
 	float getValue();
 	char getCharValue();
-
+	bool getFlag();
 	void toChar();
 	void toInteger();
 	void toFloat();
