@@ -34,6 +34,7 @@ int main()
 	std::cout << "\t\tchar_array size = " << char_arr_size << std::endl;
 
 	//проверка на пустоту
+	Array<int> test(0);
 
 	try
 	{
