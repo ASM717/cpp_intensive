@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   easyfind.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/13 13:26:07 by amuriel           #+#    #+#             */
+/*   Updated: 2021/10/13 13:49:15 by amuriel          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef EASY_FIND_HPP
 #define EASY_FIND_HPP
 
@@ -11,18 +23,18 @@ public:
 	virtual ~NotFoundValue() throw() {}
 	virtual const char* what() const throw()
 	{
-		return "Element not find!";
+		return "Element has not found!";
 	}
 };
 
 template<typename T>
-typename T::iterator easyfind(T &container, int index)
+int easyfind(T &container, int index)
 {
 	typename T::iterator elem;
 	elem = std::find(container.begin(), container.end(), index);
 	if (elem == container.end())
 		throw NotFoundValue();
-	return (elem);
+	return (*elem);
 }
 
 
