@@ -16,3 +16,5 @@
     Casts
 ### 7 module:
     Templates
+### 8 module:
+    Templated containers, iterators, algorithms
