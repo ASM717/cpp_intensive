@@ -6,7 +6,7 @@
 /*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 14:50:00 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/13 20:29:57 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/14 14:29:51 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,17 @@ int Span::shortestSpan()
 		throw AloneElementException();
 	std::vector<int> tmp_v = m_vector;
 	std::sort(tmp_v.begin(), tmp_v.end());
-	std::adjacent_difference(tmp_v.begin(), tmp_v.end(), tmp_v.begin());
-	int min = *std::min_element(tmp_v.begin(), tmp_v.end());
-	return (std::fabs(min));
+	std::vector<int>::iterator prev = tmp_v.begin();
+	std::vector<int>::iterator next = ++tmp_v.begin();
+	int min = *next - *prev;
+	while (next != tmp_v.end())
+	{
+		if (*next - *prev < min)
+		min = *next - *prev;
+		prev = next;
+		next++;
+	}
+	return min;
 }
 
 int Span::longestSpan()
