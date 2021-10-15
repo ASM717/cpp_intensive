@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 11:29:28 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/15 11:29:34 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/15 13:35:13 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ public:
 		std::stack<T>::operator=(ref);
 		return *this;
 	}
-	~MutantStack(){}
+	virtual ~MutantStack(){}
 
 	iterator begin()
 	{

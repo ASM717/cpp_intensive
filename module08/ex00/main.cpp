@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amuriel <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 13:26:12 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/13 20:29:57 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/15 12:36:08 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ int main()
 	std::cout << "\t*** Vector ***"<< std::endl;
 	try
 	{
-		std::cout << "easyfind found elem: " << easyfind(vector, 21) << std::endl;
-		std::cout << "Example error: " << easyfind(vector, 0) << std::endl;
+		std::cout << "easyfind found elem: " << easyFind(vector, 21) << std::endl;
+		std::cout << "Example error: " << easyFind(vector, 0) << std::endl;
 	}
 	catch(const std::exception& e)
 	{
@@ -40,8 +40,8 @@ int main()
 	std::cout << "\t*** List ***"<< std::endl;
 	try
 	{
-		std::cout << "easyfind found elem: " << easyfind(list, 42) << std::endl;
-		std::cout << "Example error: " << easyfind(list, 43) << std::endl;
+		std::cout << "easyfind found elem: " << easyFind(list, 42) << std::endl;
+		std::cout << "Example error: " << easyFind(list, 43) << std::endl;
 	}
 	catch(const std::exception& e)
 	{
@@ -55,8 +55,8 @@ int main()
 	std::cout << "\t*** Deque ***"<< std::endl;
 	try
 	{
-		std::cout << "easyfind found elem: " << easyfind(deque, 2142) << std::endl;
-		std::cout << "Example error: " << easyfind(deque, 2143) << std::endl;
+		std::cout << "easyfind found elem: " << easyFind(deque, 2142) << std::endl;
+		std::cout << "Example error: " << easyFind(deque, 2143) << std::endl;
 	}
 	catch(const std::exception& e)
 	{

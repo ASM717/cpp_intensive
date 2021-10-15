@@ -6,7 +6,7 @@
 /*   By: amuriel <amuriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 13:26:07 by amuriel           #+#    #+#             */
-/*   Updated: 2021/10/13 13:49:15 by amuriel          ###   ########.fr       */
+/*   Updated: 2021/10/15 12:35:48 by amuriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ public:
 };
 
 template<typename T>
-int easyfind(T &container, int index)
+int easyFind(T &container, int index)
 {
 	typename T::iterator elem;
 	elem = std::find(container.begin(), container.end(), index);
